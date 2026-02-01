@@ -16,7 +16,7 @@
                     <h1 class="hero-title">
                         Optimisez vos coûts d'impression avec des 
                         <span class="highlight">copieurs et imprimantes professionnels</span> 
-                        fiables et adaptés à votre volume réel
+                        fiables et adaptés à votre volume réel.
                     </h1>
                     
                     <p class="hero-subtitle">
@@ -187,7 +187,7 @@ onUnmounted(() => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #1a365d 0%, #2563eb 50%, #3b82f6 100%);
+    background: linear-gradient(135deg, #1a365d 0%, #294786 50%, #3b82f6 100%);
     z-index: -2;
 }
 

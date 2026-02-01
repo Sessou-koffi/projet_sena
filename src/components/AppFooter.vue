@@ -62,7 +62,7 @@
                     <ul>
                         <li>
                             <span class="contact-icon">📞</span>
-                            <a href="tel:+22990000000">+229 90 00 00 00</a>
+                            <a href="tel:+22990536593">+229 90 00 00 00</a>
                         </li>
                         <li>
                             <span class="contact-icon">📱</span>

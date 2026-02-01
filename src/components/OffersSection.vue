@@ -54,7 +54,7 @@
 
                     <div class="offer-price">
                         <span class="price-label">Solutions disponibles à partir de</span>
-                        <span class="price-value">1 500 000 FCFA</span>
+                        <span class="price-value"> 500 000 FCFA</span>
                         <span class="price-note">selon volume et fonctionnalités</span>
                     </div>
 

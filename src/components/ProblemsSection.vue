@@ -42,7 +42,7 @@ const problems = ref([
 
 <style scoped>
 .problems-section {
-    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    background: linear-gradient(135deg, #e3e3ee 0%, #c0c0c4 100%);
     padding: 80px 0;
 }
 

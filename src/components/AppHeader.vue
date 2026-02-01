@@ -1,0 +1,417 @@
+<template>
+    <!-- 
+        Composant Header - Barre de navigation fixe
+        Affiche le logo, les liens de navigation et le bouton CTA WhatsApp
+    -->
+    <header class="header" :class="{ 'scrolled': isScrolled }">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo et nom de l'entreprise -->
+                <router-link to="/" class="logo">
+                    <span class="logo-icon">🖨️</span>
+                    <span class="logo-text">
+                        <strong>SENA</strong>
+                        <small>Copieurs & Imprimantes</small>
+                    </span>
+                </router-link>
+
+                <!-- Navigation desktop -->
+                <nav class="nav-desktop">
+                    <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
+                    <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
+                    <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
+                    <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link>
+                    <!-- <router-link to="/showroom" class="nav-link">Showroom</router-link> -->
+                </nav>
+
+                <!-- Bouton CTA WhatsApp -->
+                <a 
+                    :href="whatsappUrl" 
+                    target="_blank" 
+                    class="btn btn-whatsapp"
+                    @click="trackWhatsAppClick"
+                >
+                    <span class="whatsapp-icon">📱</span>
+                    <span class="btn-text">Contactez-nous</span>
+                </a>
+
+                <!-- Menu hamburger mobile -->
+                <button class="menu-toggle" @click="toggleMobileMenu" aria-label="Menu">
+                    <span class="hamburger" :class="{ 'active': isMobileMenuOpen }"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <transition name="slide">
+            <nav v-if="isMobileMenuOpen" class="nav-mobile">
+                <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
+                <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
+                <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
+                <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link>
+                <!-- <router-link to="/showroom" class="nav-link" @click="closeMobileMenu">Showroom</router-link> -->
+                <a 
+                    :href="whatsappUrl" 
+                    target="_blank" 
+                    class="btn btn-whatsapp-mobile"
+                    @click="trackWhatsAppClick"
+                >
+                    📱 Contacter sur WhatsApp
+                </a>
+            </nav>
+        </transition>
+    </header>
+</template>
+
+<script setup>
+import { ref, computed, onMounted, onUnmounted } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
+import { analyticsService } from '../services/api';
+
+const router = useRouter();
+const route = useRoute();
+
+/**
+ * Configuration WhatsApp
+ * Remplacer par le vrai numéro de l'entreprise
+ */
+const whatsappNumber = '22990000000'; // Numéro au format international sans +
+const whatsappMessage = encodeURIComponent('Bonjour, je suis intéressé par vos solutions d\'impression professionnelles. Pouvez-vous me rappeler ?');
+const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
+
+// État du composant
+const isScrolled = ref(false);
+const isMobileMenuOpen = ref(false);
+
+/**
+ * Gestion du scroll pour le header fixe
+ */
+const handleScroll = () => {
+    isScrolled.value = window.scrollY > 50;
+};
+
+/**
+ * Scroll vers une section de la page d'accueil
+ * Gère la navigation depuis n'importe quelle page
+ */
+const scrollToSection = (sectionId) => {
+    closeMobileMenu();
+    
+    // Si on est déjà sur la page d'accueil, scroll direct
+    if (route.path === '/') {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            const headerOffset = 80;
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+    } else {
+        // Si on est sur une autre page, naviguer vers l'accueil puis scroll
+        router.push('/').then(() => {
+            setTimeout(() => {
+                const element = document.getElementById(sectionId);
+                if (element) {
+                    const headerOffset = 80;
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        });
+    }
+};
+
+/**
+ * Toggle du menu mobile
+ */
+const toggleMobileMenu = () => {
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+    // Empêcher le scroll du body quand le menu est ouvert
+    document.body.style.overflow = isMobileMenuOpen.value ? 'hidden' : '';
+};
+
+/**
+ * Fermer le menu mobile
+ */
+const closeMobileMenu = () => {
+    isMobileMenuOpen.value = false;
+    document.body.style.overflow = '';
+};
+
+/**
+ * Tracker le clic WhatsApp
+ */
+const trackWhatsAppClick = () => {
+    analyticsService.trackWhatsAppClick('header');
+    closeMobileMenu();
+};
+
+// Lifecycle hooks
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+    document.body.style.overflow = '';
+});
+</script>
+
+<style scoped>
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+.header.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    font-size: 2rem;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.logo-text strong {
+    font-size: 1.3rem;
+    color: #1a365d;
+}
+
+.logo-text small {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Navigation desktop */
+.nav-desktop {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #334155;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Bouton WhatsApp */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-whatsapp {
+    background: #25d366;
+    color: white;
+}
+
+.btn-whatsapp:hover {
+    background: #128c7e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-icon {
+    font-size: 1.2rem;
+}
+
+/* Menu hamburger */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #1a365d;
+    position: relative;
+    transition: background 0.3s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: #1a365d;
+    transition: all 0.3s;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+.hamburger.active {
+    background: transparent;
+}
+
+.hamburger.active::before {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+.hamburger.active::after {
+    bottom: 0;
+    transform: rotate(-45deg);
+}
+
+/* Navigation mobile */
+.nav-mobile {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 10px;
+    overflow-y: auto;
+}
+
+.nav-mobile .nav-link {
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.nav-mobile .nav-link:hover {
+    background: #f1f5f9;
+}
+
+.btn-whatsapp-mobile {
+    margin-top: 20px;
+    padding: 15px;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Animations */
+.slide-enter-active,
+.slide-leave-active {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .nav-desktop {
+        display: none;
+    }
+    
+    .btn-whatsapp {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text small {
+        display: none;
+    }
+    
+    .header-content {
+        height: 60px;
+    }
+}
+</style>

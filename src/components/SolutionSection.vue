@@ -45,13 +45,13 @@
                             />
                             <span class="image-label">Copieurs robustes</span>
                         </div>
-                        <div class="image-card">
+                        <!-- <div class="image-card">
                             <img 
                                 src="https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400" 
                                 alt="Imprimante professionnelle"
                             />
                             <span class="image-label">Imprimantes performantes</span>
-                        </div>
+                        </div> -->
                         <div class="image-card large">
                             <img 
                                 src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=400" 

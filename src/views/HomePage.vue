@@ -32,7 +32,7 @@ import HeroSection from '../components/HeroSection.vue';
 import ProblemsSection from '../components/ProblemsSection.vue';
 import SolutionSection from '../components/SolutionSection.vue';
 import OffersSection from '../components/OffersSection.vue';
-import TrustSection from '../components/TrustSection.vue';
+// import TrustSection from '../components/TrustSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import ContactSection from '../components/ContactSection.vue';
 

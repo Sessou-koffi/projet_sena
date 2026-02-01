@@ -10,7 +10,7 @@
                 <router-link to="/" class="logo">
                     <span class="logo-icon">🖨️</span>
                     <span class="logo-text">
-                        <strong>SENA</strong>
+                        <strong>SENA & FILS</strong>
                         <small>Copieurs & Imprimantes</small>
                     </span>
                 </router-link>

@@ -98,7 +98,7 @@ const trackCtaClick = () => {
 
 <style scoped>
 .solution-section {
-    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    background: linear-gradient(135deg, #dd6565 0%, #f5f5f5 100%);
     padding: 100px 0;
 }
 

@@ -8,11 +8,7 @@
             <div class="header-content">
                 <!-- Logo et nom de l'entreprise -->
                 <router-link to="/" class="logo">
-                    <span class="logo-icon">🖨️</span>
-                    <span class="logo-text">
-                        <strong>SENA & FILS</strong>
-                        <small>Copieurs & Imprimantes</small>
-                    </span>
+                    <img src="@/assets/logo.png" alt="SENA & FILS" class="logo-img" />
                 </router-link>
 
                 <!-- Navigation desktop -->
@@ -201,29 +197,14 @@ onUnmounted(() => {
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
     text-decoration: none;
     color: inherit;
 }
 
-.logo-icon {
-    font-size: 2rem;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.logo-text strong {
-    font-size: 1.3rem;
-    color: #1a1a1a;
-}
-
-.logo-text small {
-    font-size: 0.75rem;
-    color: #737373;
+.logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Navigation desktop */

@@ -9,11 +9,7 @@
                 <!-- Logo et description -->
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <span class="logo-icon">🖨️</span>
-                        <span class="logo-text">
-                            <strong>SENA</strong>
-                            <small>Copieurs & Imprimantes</small>
-                        </span>
+                        <img src="@/assets/logo.png" alt="SENA & FILS" class="footer-logo-img" />
                     </div>
                     <p class="footer-description">
                         Votre partenaire pour des solutions d'impression professionnelles 
@@ -157,27 +153,14 @@ const trackWhatsAppClick = () => {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
     margin-bottom: 20px;
 }
 
-.logo-icon {
-    font-size: 2rem;
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.2;
-}
-
-.logo-text strong {
-    font-size: 1.3rem;
-}
-
-.logo-text small {
-    font-size: 0.75rem;
-    opacity: 0.7;
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .footer-description {

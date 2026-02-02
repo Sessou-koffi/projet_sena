@@ -62,7 +62,7 @@
                     <ul>
                         <li>
                             <span class="contact-icon">📞</span>
-                            <a href="tel:+22901975590">+229 01 97 55 90</a>
+                            <a href="tel:+22997559059">+229 97 55 90 59</a>
                         </li>
                         <li>
                             <span class="contact-icon">📱</span>
@@ -116,7 +116,7 @@ const currentYear = new Date().getFullYear();
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22990000000';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, j\'aimerais avoir plus d\'informations sur vos solutions d\'impression.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -358,16 +358,43 @@ const trackWhatsAppClick = () => {
 
 @media (max-width: 600px) {
     .footer {
-        padding-top: 50px;
+        padding-top: 40px;
     }
     
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
     
     .footer-brand {
         grid-column: span 1;
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .logo-img {
+        height: 50px;
+    }
+    
+    .footer-description {
+        font-size: 0.9rem;
+    }
+    
+    .footer-links h4,
+    .footer-services h4,
+    .footer-contact h4 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .footer-links li,
+    .footer-services li,
+    .footer-contact li {
+        margin-bottom: 10px;
+        font-size: 0.9rem;
     }
     
     .footer-contact li {
@@ -376,19 +403,57 @@ const trackWhatsAppClick = () => {
     
     .footer-bottom {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
         text-align: center;
+        padding: 20px 0;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .footer-legal a {
+        font-size: 0.8rem;
     }
     
     .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-icon {
+        font-size: 1.5rem;
     }
     
     .whatsapp-tooltip {
         display: none;
+    }
+    
+    .qr-code-section {
+        padding: 12px;
+    }
+    
+    .qr-code-placeholder {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 380px) {
+    .footer {
+        padding-top: 30px;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 }
 </style>

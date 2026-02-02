@@ -95,7 +95,7 @@ import { analyticsService } from '../services/api';
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22901975590';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression professionnelles.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -442,47 +442,129 @@ onUnmounted(() => {
     
     .hero-cta {
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     
     .hero-slider {
         max-width: 500px;
         margin: 0 auto;
+        width: 100%;
+    }
+    
+    .slides {
+        min-height: 350px;
+    }
+    
+    .slide img {
+        height: 300px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .hero {
-        padding-top: 60px;
+        padding-top: 70px;
+        min-height: auto;
+        padding-bottom: 80px;
+    }
+    
+    .hero-content {
+        gap: 30px;
     }
     
     .hero-title {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
     }
     
     .hero-subtitle {
         font-size: 1rem;
+        margin-bottom: 20px;
     }
     
     .btn {
         width: 100%;
+        padding: 14px 20px;
+        font-size: 0.95rem;
     }
     
     .btn-large {
-        padding: 16px 24px;
-        font-size: 1rem;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .hero-cta {
+        width: 100%;
+        gap: 12px;
     }
     
     .feature-badge {
-        font-size: 0.8rem;
-        padding: 6px 12px;
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .hero-slider {
+        max-width: 100%;
+        margin: 0 -10px;
+    }
+    
+    .slider-container {
+        border-radius: 12px;
     }
     
     .slides {
-        min-height: 300px;
+        min-height: 250px;
     }
     
     .slide img {
-        height: 250px;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .slide-caption {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .slider-dots {
+        padding: 10px;
+        gap: 8px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.3rem;
+    }
+    
+    .hero-features {
+        gap: 6px;
+    }
+    
+    .feature-badge {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    
+    .slides {
+        min-height: 200px;
+    }
+    
+    .slide img {
+        height: 160px;
     }
 }
 </style>

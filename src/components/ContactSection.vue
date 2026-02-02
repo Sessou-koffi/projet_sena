@@ -629,13 +629,123 @@ const trackWhatsAppClick = () => {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .contact-section {
+        padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .contact-content {
+        gap: 30px;
+    }
+    
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .btn {
+        font-size: 0.95rem;
+    }
+    
+    .btn-large {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-icon {
+        font-size: 1.2rem;
+    }
+    
+    .or-divider {
+        margin-top: 25px;
+    }
+    
+    .or-divider span {
+        font-size: 0.9rem;
+        padding: 0 15px;
+    }
+    
+    .or-divider::before,
+    .or-divider::after {
+        width: calc(50% - 70px);
+    }
+    
+    .contact-form-wrapper {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+    
+    .btn-submit {
+        padding: 14px;
+        font-size: 1rem;
+    }
+    
+    .contact-info {
+        gap: 12px;
     }
     
     .info-card {
         padding: 15px;
+        gap: 12px;
+        border-radius: 10px;
+    }
+    
+    .info-icon {
+        font-size: 1.5rem;
+    }
+    
+    .info-content strong {
+        font-size: 0.8rem;
+    }
+    
+    .info-content a,
+    .info-content span {
+        font-size: 0.9rem;
+    }
+    
+    .success-icon {
+        font-size: 3rem;
+    }
+    
+    .success-message h3 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .contact-form-wrapper {
+        padding: 20px 12px;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 0.9rem;
     }
 }
 </style>

@@ -423,15 +423,99 @@ onMounted(() => {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .trust-section {
+        padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .clients-logos {
+        margin-bottom: 50px;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+    
+    .logos-grid {
+        gap: 15px;
+        max-width: 100%;
+    }
+    
     .logo-placeholder {
-        width: 60px;
-        height: 60px;
-        font-size: 1rem;
+        width: 55px;
+        height: 55px;
+        font-size: 0.9rem;
     }
     
     .client-name {
         font-size: 0.75rem;
+        max-width: 100px;
+    }
+    
+    .testimonials-title {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+    
+    .testimonial-card {
+        padding: 25px 15px;
+        border-radius: 15px;
+    }
+    
+    .star {
+        font-size: 1.2rem;
+    }
+    
+    .testimonial-content {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .author-info strong {
+        font-size: 1rem;
+    }
+    
+    .author-info span {
+        font-size: 0.85rem;
+    }
+    
+    .testimonial-dots {
+        margin-top: 20px;
+        gap: 8px;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .logos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .logo-placeholder {
+        width: 50px;
+        height: 50px;
+        font-size: 0.85rem;
     }
     
     .testimonial-author {

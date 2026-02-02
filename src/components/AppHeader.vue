@@ -48,7 +48,7 @@
                 <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
                 <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
                 <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
-                <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link>
+                <!-- <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link> -->
                 <!-- <router-link to="/showroom" class="nav-link" @click="closeMobileMenu">Showroom</router-link> -->
                 <a 
                     :href="whatsappUrl" 
@@ -388,15 +388,57 @@ onUnmounted(() => {
     .menu-toggle {
         display: block;
     }
+    
+    .logo-img {
+        height: 55px;
+    }
 }
 
-@media (max-width: 480px) {
-    .logo-text small {
+@media (max-width: 600px) {
+    .header-content {
+        height: 60px;
+        padding: 0 5px;
+    }
+    
+    .logo-img {
+        height: 45px;
+    }
+    
+    .logo-text {
         display: none;
     }
     
-    .header-content {
-        height: 60px;
+    .nav-mobile {
+        top: 60px;
+        padding: 15px;
+    }
+    
+    .nav-mobile .nav-link {
+        padding: 12px;
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-img {
+        height: 40px;
+    }
+    
+    .menu-toggle {
+        padding: 8px;
+    }
+    
+    .hamburger {
+        width: 22px;
+    }
+    
+    .hamburger::before,
+    .hamburger::after {
+        width: 22px;
     }
 }
 </style>

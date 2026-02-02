@@ -249,6 +249,7 @@ const trackCtaClick = () => {
     
     .solution-item {
         justify-content: center;
+        text-align: left;
     }
     
     .solution-images {
@@ -257,29 +258,74 @@ const trackCtaClick = () => {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .solution-section {
-        padding: 60px 0;
+        padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
     
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+    
+    .solution-list {
+        gap: 12px;
     }
     
     .solution-item {
+        font-size: 0.95rem;
+        gap: 10px;
+    }
+    
+    .solution-check {
         font-size: 1rem;
+    }
+    
+    .solution-tagline {
+        font-size: 1rem;
+        padding: 12px 15px;
     }
     
     .image-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
     }
     
     .image-card.large {
         grid-column: span 1;
     }
     
+    .image-card img {
+        height: 150px;
+    }
+    
+    .image-card.large img {
+        height: 160px;
+    }
+    
+    .image-label {
+        font-size: 0.85rem;
+        padding: 10px 12px;
+    }
+    
     .btn {
         width: 100%;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.25rem;
+    }
+    
+    .solution-item {
+        font-size: 0.9rem;
     }
 }
 </style>

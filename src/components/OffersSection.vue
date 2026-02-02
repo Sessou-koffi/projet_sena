@@ -598,17 +598,109 @@ onMounted(() => {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    .offers-section {
+        padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .offers-grid {
+        gap: 20px;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    
     .offer-card {
-        padding: 30px 20px;
+        padding: 25px 18px;
+        border-radius: 15px;
+    }
+    
+    .offer-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
     }
     
     .offer-title {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .offer-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .offer-features {
+        margin-bottom: 20px;
+    }
+    
+    .offer-features li {
+        font-size: 0.9rem;
+        padding: 6px 0;
+    }
+    
+    .offer-price {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .price-label {
+        font-size: 0.8rem;
     }
     
     .price-value {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    .price-note {
+        font-size: 0.75rem;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .featured-badge {
+        padding: 4px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .showcase-title {
+        font-size: 1.4rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .offer-card {
+        padding: 20px 15px;
+    }
+    
+    .offer-title {
+        font-size: 1.1rem;
+    }
+    
+    .price-value {
+        font-size: 1.3rem;
     }
 }
 </style>

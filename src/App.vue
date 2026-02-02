@@ -203,11 +203,46 @@ select {
     html {
         font-size: 15px;
     }
+    
+    .container {
+        padding: 0 15px;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     html {
         font-size: 14px;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .container {
+        padding: 0 10px;
+    }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Better touch targets for mobile */
+@media (max-width: 768px) {
+    button, 
+    a, 
+    input, 
+    select, 
+    textarea {
+        min-height: 44px;
     }
 }
 </style>

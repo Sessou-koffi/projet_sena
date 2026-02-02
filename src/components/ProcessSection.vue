@@ -268,17 +268,91 @@ const steps = ref([
     }
 }
 
-@media (max-width: 480px) {
-    .section-title {
-        font-size: 1.75rem;
+@media (max-width: 600px) {
+    .process-section {
+        padding: 50px 0;
     }
     
-    .bonus-content {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-subtitle {
         font-size: 1rem;
     }
     
+    .process-steps {
+        gap: 20px;
+        margin-bottom: 35px;
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .step-content {
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+    
+    .step-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .step-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .step-description {
+        font-size: 0.85rem;
+    }
+    
+    .process-bonus {
+        padding: 18px 15px;
+        border-radius: 12px;
+        gap: 15px;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .bonus-icon {
+        font-size: 2rem;
+    }
+    
+    .bonus-content {
+        font-size: 0.95rem;
+    }
+    
     .bonus-content strong {
-        font-size: 1.1rem;
+        font-size: 1rem;
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .step-content {
+        padding: 18px 12px;
+    }
+    
+    .bonus-content {
+        font-size: 0.9rem;
     }
 }
 </style>

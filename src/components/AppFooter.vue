@@ -9,7 +9,7 @@
                 <!-- Logo et description -->
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="@/assets/logo.png" alt="SENA & FILS" class="footer-logo-img" />
+                        <img src="../assets/images/logo.png" alt="SENA & FILS" class="footer-logo-img" />
                     </div>
                     <p class="footer-description">
                         Votre partenaire pour des solutions d'impression professionnelles 

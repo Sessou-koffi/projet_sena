@@ -8,13 +8,19 @@
             <div class="header-content">
                 <!-- Logo et nom de l'entreprise -->
                 <router-link to="/" class="logo">
-                    <img src="@/assets/logo.png" alt="SENA & FILS" class="logo-img" />
+                    <img src="../assets/logo.png" alt="SENA & FILS" class="logo-img" />
+
+                    <!-- <span class="logo-icon">🖨️</span>-->
+                     <span class="logo-text">
+                        <strong>SENA & FILS</strong> <br/>
+                        <small>Copieurs & Imprimantes</small>
+                    </span> 
                 </router-link>
 
                 <!-- Navigation desktop -->
                 <nav class="nav-desktop">
                     <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
-                    <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
+                     <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
                     <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
                     <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link>
                     <!-- <router-link to="/showroom" class="nav-link">Showroom</router-link> -->
@@ -202,7 +208,7 @@ onUnmounted(() => {
 }
 
 .logo-img {
-    height: 50px;
+    height: 70px;
     width: auto;
     object-fit: contain;
 }

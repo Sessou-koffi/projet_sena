@@ -130,7 +130,7 @@ const trackWhatsAppClick = () => {
 
 <style scoped>
 .footer {
-    background: #0f172a;
+    background: #1a1a1a;
     color: white;
     padding-top: 80px;
 }
@@ -211,7 +211,7 @@ const trackWhatsAppClick = () => {
 }
 
 .qr-mock {
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     font-size: 1.5rem;
 }
@@ -249,7 +249,7 @@ const trackWhatsAppClick = () => {
 
 .footer-links a:hover,
 .footer-contact a:hover {
-    color: #2563eb;
+    color: #DC2626;
 }
 
 .footer-services li {
@@ -322,7 +322,7 @@ const trackWhatsAppClick = () => {
     position: absolute;
     right: 70px;
     background: white;
-    color: #1a365d;
+    color: #1a1a1a;
     padding: 8px 15px;
     border-radius: 8px;
     font-size: 0.85rem;

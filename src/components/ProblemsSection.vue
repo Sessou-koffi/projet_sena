@@ -115,7 +115,7 @@ const problems = ref([
 
 .transition-text h3 {
     font-size: 1.75rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin: 0;
 }

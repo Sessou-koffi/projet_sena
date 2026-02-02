@@ -82,7 +82,7 @@ const steps = ref([
 <style scoped>
 .process-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
 }
 
 .container {
@@ -98,14 +98,14 @@ const steps = ref([
 
 .section-title {
     font-size: 2.5rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: #64748b;
+    color: #737373;
 }
 
 /* Étapes du processus */
@@ -131,7 +131,7 @@ const steps = ref([
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: #2563eb;
+    background: #DC2626;
     color: white;
     display: flex;
     align-items: center;
@@ -164,14 +164,14 @@ const steps = ref([
 
 .step-title {
     font-size: 1.1rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .step-description {
     font-size: 0.9rem;
-    color: #64748b;
+    color: #737373;
     line-height: 1.5;
     margin: 0;
 }
@@ -189,11 +189,11 @@ const steps = ref([
 .connector-line {
     width: 40px;
     height: 2px;
-    background: #2563eb;
+    background: #DC2626;
 }
 
 .connector-arrow {
-    color: #2563eb;
+    color: #DC2626;
     font-size: 1.2rem;
     margin-left: -5px;
 }

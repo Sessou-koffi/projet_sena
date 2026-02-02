@@ -182,7 +182,7 @@ const showOnlyShowroom = ref(false);
 /**
  * Configuration WhatsApp générale
  */
-const whatsappNumber = '22990000000';
+const whatsappNumber = '22990536593';
 const whatsappMessage = encodeURIComponent('Bonjour, je visite votre showroom en ligne et j\'aimerais plus d\'informations.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -315,7 +315,7 @@ onMounted(() => {
 
 /* Page header */
 .page-header {
-    background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #DC2626 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -382,13 +382,13 @@ onMounted(() => {
 }
 
 .filter-btn:hover {
-    border-color: #2563eb;
-    color: #2563eb;
+    border-color: #DC2626;
+    color: #DC2626;
 }
 
 .filter-btn.active {
-    background: #2563eb;
-    border-color: #2563eb;
+    background: #DC2626;
+    border-color: #DC2626;
     color: white;
 }
 
@@ -447,11 +447,11 @@ onMounted(() => {
 }
 
 .category-badge.imprimante {
-    background: #8b5cf6;
+    background: #1a1a1a;
 }
 
 .category-badge.copieur {
-    background: #2563eb;
+    background: #DC2626;
 }
 
 .volume-badge {
@@ -480,7 +480,7 @@ onMounted(() => {
 
 .product-brand {
     font-size: 0.85rem;
-    color: #64748b;
+    color: #737373;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -488,12 +488,12 @@ onMounted(() => {
 .product-name {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #1a365d;
+    color: #1a1a1a;
     margin: 5px 0 0 0;
 }
 
 .product-description {
-    color: #64748b;
+    color: #737373;
     font-size: 0.9rem;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -515,11 +515,11 @@ onMounted(() => {
 }
 
 .spec-label {
-    color: #64748b;
+    color: #737373;
 }
 
 .spec-value {
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 500;
 }
 
@@ -536,7 +536,7 @@ onMounted(() => {
 .product-price {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #DC2626;
 }
 
 .product-actions {
@@ -562,12 +562,12 @@ onMounted(() => {
 
 .btn-outline {
     background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #DC2626;
+    border: 2px solid #DC2626;
 }
 
 .btn-outline:hover {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
@@ -614,8 +614,8 @@ onMounted(() => {
 .loader {
     width: 50px;
     height: 50px;
-    border: 4px solid #e2e8f0;
-    border-top-color: #2563eb;
+    border: 4px solid #e5e5e5;
+    border-top-color: #DC2626;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 20px;
@@ -634,12 +634,12 @@ onMounted(() => {
 
 .empty-state h3 {
     font-size: 1.5rem;
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
 .empty-state p {
-    color: #64748b;
+    color: #737373;
     margin-bottom: 20px;
 }
 
@@ -647,19 +647,19 @@ onMounted(() => {
 .page-cta {
     text-align: center;
     padding: 60px 20px;
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
     border-radius: 20px;
     margin-bottom: 60px;
 }
 
 .page-cta h3 {
     font-size: 1.5rem;
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
 .page-cta p {
-    color: #64748b;
+    color: #737373;
     margin-bottom: 25px;
 }
 

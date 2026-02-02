@@ -187,7 +187,7 @@ onUnmounted(() => {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #1a365d 0%, #294786 50%, #3b82f6 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #DC2626 100%);
     z-index: -2;
 }
 
@@ -228,8 +228,8 @@ onUnmounted(() => {
 }
 
 .highlight {
-    color: #fbbf24;
-    background: linear-gradient(180deg, transparent 60%, rgba(251, 191, 36, 0.3) 60%);
+    color: #DC2626;
+    background: linear-gradient(180deg, transparent 60%, rgba(220, 38, 38, 0.3) 60%);
 }
 
 .hero-subtitle {
@@ -347,7 +347,7 @@ onUnmounted(() => {
     padding: 20px;
     text-align: center;
     font-weight: 500;
-    color: #1a365d;
+    color: #1a1a1a;
     background: white;
 }
 
@@ -370,7 +370,7 @@ onUnmounted(() => {
 }
 
 .dot.active {
-    background: #2563eb;
+    background: #DC2626;
     transform: scale(1.2);
 }
 

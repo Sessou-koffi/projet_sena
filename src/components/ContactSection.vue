@@ -309,7 +309,7 @@ const trackWhatsAppClick = () => {
 <style scoped>
 .contact-section {
     padding: 100px 0;
-    background: linear-gradient(135deg, #1a365d 0%, #3b599b 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 .container {
@@ -435,7 +435,7 @@ const trackWhatsAppClick = () => {
 
 .form-group label {
     font-weight: 600;
-    color: #1a365d;
+    color: #1a1a1a;
     font-size: 0.95rem;
 }
 
@@ -454,9 +454,9 @@ const trackWhatsAppClick = () => {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #2563eb;
+    border-color: #DC2626;
     background: white;
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
 }
 
 .form-group input.error,
@@ -477,12 +477,12 @@ const trackWhatsAppClick = () => {
 .btn-submit {
     width: 100%;
     padding: 16px;
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
 .btn-submit:hover:not(:disabled) {
-    background: #1d4ed8;
+    background: #B91C1C;
     transform: translateY(-2px);
 }
 

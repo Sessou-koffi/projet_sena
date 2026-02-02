@@ -43,27 +43,34 @@ import AppFooter from './components/AppFooter.vue';
 
 /* Variables CSS globales */
 :root {
-    --color-primary: #2563eb;
-    --color-primary-dark: #1d4ed8;
-    --color-secondary: #1a365d;
+    /* Couleurs principales - Charte graphique: Rouge, Noir, Blanc */
+    --color-primary: #DC2626;
+    --color-primary-dark: #B91C1C;
+    --color-primary-light: #EF4444;
+    --color-secondary: #1a1a1a;
+    --color-secondary-light: #2d2d2d;
+    
     --color-success: #22c55e;
     --color-whatsapp: #25d366;
-    --color-danger: #ef4444;
+    --color-danger: #DC2626;
     --color-warning: #fbbf24;
     
-    --color-text: #1a365d;
-    --color-text-light: #64748b;
-    --color-text-muted: #94a3b8;
+    /* Textes */
+    --color-text: #1a1a1a;
+    --color-text-light: #4a4a4a;
+    --color-text-muted: #737373;
     
-    --color-bg: #f8fafc;
+    /* Fonds */
+    --color-bg: #f5f5f5;
     --color-bg-white: #ffffff;
-    --color-border: #e2e8f0;
+    --color-bg-dark: #1a1a1a;
+    --color-border: #e5e5e5;
     
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
     
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
     
     --radius-sm: 8px;
     --radius-md: 12px;
@@ -147,12 +154,12 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--color-text-light);
+    background: var(--color-primary);
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--color-text);
+    background: var(--color-primary-dark);
 }
 
 /* Utilitaires */

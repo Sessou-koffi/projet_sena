@@ -98,7 +98,7 @@ const trackCtaClick = () => {
 
 <style scoped>
 .solution-section {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
     padding: 100px 0;
 }
 
@@ -117,7 +117,7 @@ const trackCtaClick = () => {
 
 .section-title {
     font-size: 2rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin-bottom: 30px;
     line-height: 1.3;
@@ -139,7 +139,7 @@ const trackCtaClick = () => {
 }
 
 .solution-check {
-    color: #22c55e;
+    color: #DC2626;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
@@ -150,13 +150,13 @@ const trackCtaClick = () => {
 
 .solution-tagline {
     font-size: 1.15rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 600;
     margin-bottom: 30px;
     padding: 15px 20px;
-    background: rgba(34, 197, 94, 0.1);
+    background: rgba(220, 38, 38, 0.08);
     border-radius: 10px;
-    border-left: 4px solid #22c55e;
+    border-left: 4px solid #DC2626;
 }
 
 .btn {
@@ -175,15 +175,15 @@ const trackCtaClick = () => {
 }
 
 .btn-primary {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: #B91C1C;
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
 }
 
 .btn-icon {

@@ -218,12 +218,12 @@ onUnmounted(() => {
 
 .logo-text strong {
     font-size: 1.3rem;
-    color: #1a365d;
+    color: #1a1a1a;
 }
 
 .logo-text small {
     font-size: 0.75rem;
-    color: #64748b;
+    color: #737373;
 }
 
 /* Navigation desktop */
@@ -234,7 +234,7 @@ onUnmounted(() => {
 }
 
 .nav-link {
-    color: #334155;
+    color: #1a1a1a;
     text-decoration: none;
     font-weight: 500;
     font-size: 0.95rem;
@@ -243,7 +243,7 @@ onUnmounted(() => {
 }
 
 .nav-link:hover {
-    color: #2563eb;
+    color: #DC2626;
 }
 
 .nav-link::after {
@@ -253,7 +253,7 @@ onUnmounted(() => {
     left: 0;
     width: 0;
     height: 2px;
-    background: #2563eb;
+    background: #DC2626;
     transition: width 0.3s;
 }
 
@@ -304,7 +304,7 @@ onUnmounted(() => {
     display: block;
     width: 25px;
     height: 3px;
-    background: #1a365d;
+    background: #1a1a1a;
     position: relative;
     transition: background 0.3s;
 }
@@ -315,7 +315,7 @@ onUnmounted(() => {
     position: absolute;
     width: 25px;
     height: 3px;
-    background: #1a365d;
+    background: #1a1a1a;
     transition: all 0.3s;
 }
 

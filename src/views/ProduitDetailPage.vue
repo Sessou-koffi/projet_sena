@@ -284,13 +284,13 @@ watch(() => route.params.slug, loadProduit);
 }
 
 .breadcrumb a {
-    color: #64748b;
+    color: #737373;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
-    color: #2563eb;
+    color: #DC2626;
 }
 
 .breadcrumb span {
@@ -299,7 +299,7 @@ watch(() => route.params.slug, loadProduit);
 }
 
 .breadcrumb .current {
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 500;
 }
 
@@ -362,7 +362,7 @@ watch(() => route.params.slug, loadProduit);
 }
 
 .thumbnail.active {
-    border-color: #2563eb;
+    border-color: #DC2626;
 }
 
 .thumbnail img {
@@ -386,14 +386,14 @@ watch(() => route.params.slug, loadProduit);
 
 .product-brand {
     font-size: 0.9rem;
-    color: #64748b;
+    color: #737373;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 .product-name {
     font-size: 2rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin: 0;
 }
@@ -411,13 +411,13 @@ watch(() => route.params.slug, loadProduit);
 }
 
 .badge.imprimante {
-    background: #f3e8ff;
-    color: #7c3aed;
+    background: #f5f5f5;
+    color: #1a1a1a;
 }
 
 .badge.copieur {
-    background: #dbeafe;
-    color: #2563eb;
+    background: #fef2f2;
+    color: #DC2626;
 }
 
 .badge.volume {
@@ -428,7 +428,7 @@ watch(() => route.params.slug, loadProduit);
 .product-price {
     font-size: 2rem;
     font-weight: 700;
-    color: #2563eb;
+    color: #DC2626;
 }
 
 .product-description {
@@ -477,22 +477,22 @@ watch(() => route.params.slug, loadProduit);
 
 .btn-outline {
     background: white;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #DC2626;
+    border: 2px solid #DC2626;
 }
 
 .btn-outline:hover {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
 .btn-primary {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
 .btn-primary:hover {
-    background: #1d4ed8;
+    background: #B91C1C;
 }
 
 /* Caractéristiques */
@@ -505,7 +505,7 @@ watch(() => route.params.slug, loadProduit);
 
 .product-specs h3 {
     font-size: 1.25rem;
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 20px;
 }
 
@@ -527,30 +527,30 @@ watch(() => route.params.slug, loadProduit);
 }
 
 .spec-label {
-    color: #64748b;
+    color: #737373;
     font-weight: 500;
     width: 40%;
 }
 
 .spec-value {
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 600;
 }
 
 /* Contact rapide */
 .quick-contact {
-    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    background: linear-gradient(135deg, #f5f5f5 0%, #e5e5e5 100%);
     border-radius: 15px;
     padding: 25px;
 }
 
 .quick-contact h4 {
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 5px;
 }
 
 .quick-contact p {
-    color: #64748b;
+    color: #737373;
     margin-bottom: 20px;
     font-size: 0.95rem;
 }
@@ -567,14 +567,14 @@ watch(() => route.params.slug, loadProduit);
     padding: 10px 20px;
     background: white;
     border-radius: 8px;
-    color: #1a365d;
+    color: #1a1a1a;
     text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
 .contact-option:hover {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
@@ -584,7 +584,7 @@ watch(() => route.params.slug, loadProduit);
 
 /* CTA final */
 .page-cta {
-    background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+    background: linear-gradient(135deg, #1a1a1a 0%, #DC2626 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -613,8 +613,8 @@ watch(() => route.params.slug, loadProduit);
 .loader {
     width: 50px;
     height: 50px;
-    border: 4px solid #e2e8f0;
-    border-top-color: #2563eb;
+    border: 4px solid #e5e5e5;
+    border-top-color: #DC2626;
     border-radius: 50%;
     animation: spin 1s linear infinite;
     margin: 0 auto 20px;
@@ -638,12 +638,12 @@ watch(() => route.params.slug, loadProduit);
 
 .not-found-content h2 {
     font-size: 1.75rem;
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
 .not-found-content p {
-    color: #64748b;
+    color: #737373;
     margin-bottom: 25px;
 }
 

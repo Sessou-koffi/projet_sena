@@ -258,14 +258,14 @@ onMounted(() => {
 
 .section-title {
     font-size: 2.5rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 .section-subtitle {
     font-size: 1.2rem;
-    color: #64748b;
+    color: #737373;
 }
 
 /* Grille des offres */
@@ -293,7 +293,7 @@ onMounted(() => {
 }
 
 .offer-card.featured {
-    border-color: #2563eb;
+    border-color: #DC2626;
     transform: scale(1.05);
 }
 
@@ -306,7 +306,7 @@ onMounted(() => {
     top: -12px;
     left: 50%;
     transform: translateX(-50%);
-    background: #2563eb;
+    background: #DC2626;
     color: white;
     padding: 5px 20px;
     border-radius: 20px;
@@ -321,13 +321,13 @@ onMounted(() => {
 
 .offer-title {
     font-size: 1.5rem;
-    color: #1a365d;
+    color: #1a1a1a;
     font-weight: 700;
     margin-bottom: 5px;
 }
 
 .offer-subtitle {
-    color: #64748b;
+    color: #737373;
     margin-bottom: 25px;
 }
 
@@ -367,7 +367,7 @@ onMounted(() => {
     display: block;
     font-size: 1.75rem;
     font-weight: 700;
-    color: #1a365d;
+    color: #DC2626;
 }
 
 .price-note {
@@ -405,25 +405,25 @@ onMounted(() => {
 
 .btn-outline {
     background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #DC2626;
+    border: 2px solid #DC2626;
 }
 
 .btn-outline:hover {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
 .btn-outline-primary {
     background: transparent;
-    color: #2563eb;
-    border: 2px solid #2563eb;
+    color: #DC2626;
+    border: 2px solid #DC2626;
     width: auto;
     padding: 14px 40px;
 }
 
 .btn-outline-primary:hover {
-    background: #2563eb;
+    background: #DC2626;
     color: white;
 }
 
@@ -436,7 +436,7 @@ onMounted(() => {
 .showcase-title {
     text-align: center;
     font-size: 1.75rem;
-    color: #1a365d;
+    color: #1a1a1a;
     margin-bottom: 40px;
 }
 
@@ -484,11 +484,11 @@ onMounted(() => {
 }
 
 .product-badge.imprimante {
-    background: #8b5cf6;
+    background: #1a1a1a;
 }
 
 .product-badge.copieur {
-    background: #2563eb;
+    background: #DC2626;
 }
 
 .showroom-badge {

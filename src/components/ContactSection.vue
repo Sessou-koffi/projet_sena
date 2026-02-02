@@ -148,7 +148,7 @@
                         <div class="info-icon">📞</div>
                         <div class="info-content">
                             <strong>Téléphone</strong>
-                            <a href="tel:+22901975590">+229 01 97 55 90</a>
+                            <a href="tel:+22997559059">+229 97 55 90 59</a>
                         </div>
                     </div>
                     
@@ -197,7 +197,7 @@ const submitSuccess = ref(false);
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22901975590';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -242,6 +242,11 @@ const validateForm = () => {
 };
 
 /**
+ * URL du Google Apps Script pour enregistrer les leads
+ */
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4V506Qe7LYC9Bl8dJvRNL1dRF0ACl1kigAxN2pAq9J6HTWZvwOBU0VrVF5YAXSTll/exec';
+
+/**
  * Soumission du formulaire
  */
 const submitForm = async () => {
@@ -253,46 +258,56 @@ const submitForm = async () => {
     isSubmitting.value = true;
     
     try {
-        // Détecter la source depuis l'URL si présente
-        const urlParams = new URLSearchParams(window.location.search);
-        form.source = urlParams.get('utm_source') || urlParams.get('source') || 'website';
+        // Préparer les données pour Google Sheets
+        const formData = {
+            nom: form.nom,
+            email: form.email || 'Non renseigné',
+            telephone: form.telephone,
+            entreprise: form.entreprise,
+            message: `Besoin: ${form.besoin}${form.message ? ' - ' + form.message : ''}`
+        };
         
-        // Envoyer les données à l'API
-        const response = await leadService.create(form);
+        // Envoyer vers Google Sheets
+        const response = await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors', // Nécessaire pour Google Apps Script
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        });
         
-        if (response.success) {
-            // Tracker le formulaire soumis
-            analyticsService.track('formulaire_soumis', {
-                page: 'contact',
-                metadata: { besoin: form.besoin }
-            });
-            
-            // Afficher le message de succès
-            submitSuccess.value = true;
-            
-            // Réinitialiser le formulaire
-            Object.assign(form, {
-                nom: '',
-                entreprise: '',
-                telephone: '',
-                email: '',
-                besoin: '',
-                message: '',
-                source: 'website'
-            });
-            
-            // Masquer le message de succès après 5 secondes
-            setTimeout(() => {
-                submitSuccess.value = false;
-            }, 5000);
-        }
+        // Avec mode: 'no-cors', on ne peut pas lire la réponse
+        // mais si pas d'erreur, on considère que c'est réussi
+        
+        // Tracker le formulaire soumis
+        analyticsService.track('formulaire_soumis', {
+            page: 'contact',
+            metadata: { besoin: form.besoin }
+        });
+        
+        // Afficher le message de succès
+        submitSuccess.value = true;
+        
+        // Réinitialiser le formulaire
+        Object.assign(form, {
+            nom: '',
+            entreprise: '',
+            telephone: '',
+            email: '',
+            besoin: '',
+            message: '',
+            source: 'website'
+        });
+        
+        // Masquer le message de succès après 5 secondes
+        setTimeout(() => {
+            submitSuccess.value = false;
+        }, 5000);
+        
     } catch (error) {
         console.error('Erreur soumission formulaire:', error);
-        
-        // Afficher les erreurs de validation du serveur
-        if (error.response?.data?.errors) {
-            Object.assign(errors, error.response.data.errors);
-        }
+        alert('Une erreur est survenue. Veuillez réessayer ou nous contacter sur WhatsApp.');
     } finally {
         isSubmitting.value = false;
     }

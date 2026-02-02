@@ -244,7 +244,7 @@ const validateForm = () => {
 /**
  * URL du Google Apps Script pour enregistrer les leads
  */
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4V506Qe7LYC9Bl8dJvRNL1dRF0ACl1kigAxN2pAq9J6HTWZvwOBU0VrVF5YAXSTll/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxtxkB9SGWNyo8TdIHgD8bknXAevomNeWC28D-j2TMjC6TNQBh2PLnKDMsqj6rFU0VDxA/exec';
 
 /**
  * Soumission du formulaire

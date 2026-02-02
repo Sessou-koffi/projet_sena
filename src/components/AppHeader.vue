@@ -18,10 +18,9 @@
                 <!-- Navigation desktop -->
                 <nav class="nav-desktop">
                     <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
-                     <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
+                    <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Offres</router-link>
+                    <router-link to="/#catalogue" class="nav-link" @click="scrollToSection('catalogue')">Catalogue</router-link>
                     <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
-                    <!-- <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link> -->
-                    <!-- <router-link to="/showroom" class="nav-link">Showroom</router-link> -->
                 </nav>
 
                 <!-- Bouton CTA WhatsApp -->
@@ -46,10 +45,9 @@
         <transition name="slide">
             <nav v-if="isMobileMenuOpen" class="nav-mobile">
                 <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
-                <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
+                <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Offres</router-link>
+                <router-link to="/#catalogue" class="nav-link" @click="scrollToSection('catalogue')">Catalogue</router-link>
                 <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
-                <!-- <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link> -->
-                <!-- <router-link to="/showroom" class="nav-link" @click="closeMobileMenu">Showroom</router-link> -->
                 <a 
                     :href="whatsappUrl" 
                     target="_blank" 

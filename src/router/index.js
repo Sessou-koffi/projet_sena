@@ -30,7 +30,7 @@ const routes = [
     {
         path: '/produit/:slug',
         name: 'ProduitDetail',
-        component: () => import('../views/ProduitDetailPage.vue'),
+        component: () => import('../views/ProductDetailPage.vue'),
         meta: {
             title: 'Détail produit',
             description: 'Caractéristiques détaillées du produit'

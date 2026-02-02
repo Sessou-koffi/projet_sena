@@ -25,11 +25,11 @@
 
                     <!-- Points forts -->
                     <div class="hero-features">
-                        <span class="feature-badge">✅ Vente</span>
-                        <span class="feature-badge">✅ Maintenance</span>
-                        <span class="feature-badge">✅ Leasing</span>
-                        <span class="feature-badge">✅ Fourniture</span>
-                        <span class="feature-badge">✅ Encres</span>
+                        <span class="feature-badge"> Vente</span>
+                        <span class="feature-badge"> Maintenance</span>
+                        <span class="feature-badge"> Leasing</span>
+                        <span class="feature-badge"> Fourniture</span>
+                        <span class="feature-badge"> Encres</span>
                     </div>
 
                     <!-- Bouton CTA principal -->
@@ -95,7 +95,7 @@ import { analyticsService } from '../services/api';
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22990536593';
+const whatsappNumber = '22901975590';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression professionnelles.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -285,13 +285,13 @@ onUnmounted(() => {
 }
 
 .btn-primary {
-    background: #25d366;
+    background: #eb3f3fd3;
     color: white;
-    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 15px rgba(216, 102, 74, 0.3);
 }
 
 .btn-primary:hover {
-    background: #128c7e;
+    background: #9e3232;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }

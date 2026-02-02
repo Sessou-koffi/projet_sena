@@ -9,7 +9,11 @@
                 <!-- Logo et description -->
                 <div class="footer-brand">
                     <div class="footer-logo">
-                        <img src="../assets/images/logo.png" alt="SENA & FILS" class="footer-logo-img" />
+                        <img src="../assets/logo.png" alt="SENA & FILS" class="logo-img" />
+                        <!-- <span class="logo-text">
+                            <strong>SENA & FILS</strong> <br/>
+                            <small>Copieurs & Imprimantes</small>
+                        </span>                    -->
                     </div>
                     <p class="footer-description">
                         Votre partenaire pour des solutions d'impression professionnelles 
@@ -58,7 +62,7 @@
                     <ul>
                         <li>
                             <span class="contact-icon">📞</span>
-                            <a href="tel:+22990536593">+229 90 00 00 00</a>
+                            <a href="tel:+22901975590">+229 01 97 55 90</a>
                         </li>
                         <li>
                             <span class="contact-icon">📱</span>
@@ -154,10 +158,11 @@ const trackWhatsAppClick = () => {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    background-color: #DC2626;
 }
 
 .footer-logo-img {
-    height: 60px;
+    height: 20px;
     width: auto;
     object-fit: contain;
     filter: brightness(0) invert(1);

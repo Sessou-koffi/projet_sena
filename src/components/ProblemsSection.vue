@@ -70,7 +70,7 @@ const problems = ref([
     background: white;
     padding: 20px 25px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(236, 238, 236, 0);
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

@@ -148,7 +148,7 @@
                         <div class="info-icon">📞</div>
                         <div class="info-content">
                             <strong>Téléphone</strong>
-                            <a href="tel:+22990536593">+229 90 00 00 00</a>
+                            <a href="tel:+22901975590">+229 01 97 55 90</a>
                         </div>
                     </div>
                     
@@ -197,7 +197,7 @@ const submitSuccess = ref(false);
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22990536593';
+const whatsappNumber = '22901975590';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -363,7 +363,7 @@ const trackWhatsAppClick = () => {
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: #e276ac;
     color: white;
     box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 }

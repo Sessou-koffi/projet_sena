@@ -9,8 +9,6 @@
                 <!-- Logo et nom de l'entreprise -->
                 <router-link to="/" class="logo">
                     <img src="../assets/logo.png" alt="SENA & FILS" class="logo-img" />
-
-                    <!-- <span class="logo-icon">🖨️</span>-->
                      <span class="logo-text">
                         <strong>SENA & FILS</strong> <br/>
                         <small>Copieurs & Imprimantes</small>
@@ -22,7 +20,7 @@
                     <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
                      <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Produits</router-link>
                     <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
-                    <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link>
+                    <!-- <router-link to="/#temoignages" class="nav-link" @click="scrollToSection('temoignages')">Témoignages</router-link> -->
                     <!-- <router-link to="/showroom" class="nav-link">Showroom</router-link> -->
                 </nav>
 
@@ -77,7 +75,7 @@ const route = useRoute();
  * Configuration WhatsApp
  * Remplacer par le vrai numéro de l'entreprise
  */
-const whatsappNumber = '22990000000'; // Numéro au format international sans +
+const whatsappNumber = '2290197559059'; // Numéro au format international sans +
 const whatsappMessage = encodeURIComponent('Bonjour, je suis intéressé par vos solutions d\'impression professionnelles. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -263,12 +261,12 @@ onUnmounted(() => {
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: #971f3d;
     color: white;
 }
 
 .btn-whatsapp:hover {
-    background: #128c7e;
+    background: #d44641;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
 }

@@ -182,7 +182,7 @@ const showOnlyShowroom = ref(false);
 /**
  * Configuration WhatsApp générale
  */
-const whatsappNumber = '22990536593';
+const whatsappNumber = '22901975590';
 const whatsappMessage = encodeURIComponent('Bonjour, je visite votre showroom en ligne et j\'aimerais plus d\'informations.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

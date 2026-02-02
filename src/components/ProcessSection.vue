@@ -34,7 +34,7 @@
 
             <!-- Bonus / Avantage -->
             <div class="process-bonus">
-                <div class="bonus-icon">🎁</div>
+                <div class="bonus-icon"></div>
                 <div class="bonus-content">
                     <strong>Bonus inclus :</strong>
                     <span>Maintenance préventive bimensuelle gratuite pendant 1 an</span>
@@ -52,27 +52,27 @@ import { ref } from 'vue';
  */
 const steps = ref([
     {
-        icon: '📝',
+        // icon: '📝',
         title: 'Vous demandez un devis',
         description: 'Contactez-nous via WhatsApp, téléphone ou formulaire'
     },
     {
-        icon: '🔍',
+        // icon: '🔍',
         title: 'Nous analysons vos besoins',
         description: 'Un expert évalue votre volume et vos contraintes'
     },
     {
-        icon: '💡',
+        // icon: '💡',
         title: 'Nous proposons la machine adaptée',
         description: 'Recommandation personnalisée selon votre budget'
     },
     {
-        icon: '🚚',
+        // icon: '🚚',
         title: 'Installation & suivi assuré',
         description: 'Livraison, installation et formation de vos équipes'
     },
     {
-        icon: '🔧',
+        // icon: '🔧',
         title: 'Maintenance préventive',
         description: 'Suivi régulier pour éviter les pannes'
     }
@@ -204,7 +204,7 @@ const steps = ref([
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    background: linear-gradient(135deg, #e04f35 0%, #cc3064 100%);
     color: white;
     padding: 25px 40px;
     border-radius: 15px;

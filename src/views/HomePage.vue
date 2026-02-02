@@ -19,8 +19,8 @@
         <!-- Section Catalogue Produits -->
         <ProductsSection />
         
-        <!-- Section Clients de confiance + Témoignages -->
-        <TrustSection />
+        <!-- Section Clients de confiance + Témoignages (désactivée) -->
+        <!-- <TrustSection /> -->
         
         <!-- Section Processus -->
         <ProcessSection />
@@ -36,7 +36,7 @@ import ProblemsSection from '../components/ProblemsSection.vue';
 import SolutionSection from '../components/SolutionSection.vue';
 import OffersSection from '../components/OffersSection.vue';
 import ProductsSection from '../components/ProductsSection.vue';
-import TrustSection from '../components/TrustSection.vue';
+// import TrustSection from '../components/TrustSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';
 import ContactSection from '../components/ContactSection.vue';
 

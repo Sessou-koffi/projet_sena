@@ -30,7 +30,7 @@
                         class="btn btn-primary"
                         @click="trackCtaClick"
                     >
-                        <span class="btn-icon">💬</span>
+                        <span class="btn-icon"></span>
                         Demander un devis
                     </a>
                 </div>

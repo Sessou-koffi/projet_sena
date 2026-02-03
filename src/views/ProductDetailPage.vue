@@ -29,7 +29,7 @@
                                     {{ product.type === 'copieur' ? 'Copieur' : 'Imprimante' }}
                                 </span>
                                 <span :class="['badge', product.color]">
-                                    {{ product.color === 'couleur' ? '🎨 Couleur' : '⚫ N&B' }}
+                                    {{ product.color === 'couleur' ? ' Couleur' : '⚫ N&B' }}
                                 </span>
                             </div>
                         </div>
@@ -51,14 +51,14 @@
                                 </div>
                             </div>
                             <div class="spec-item">
-                                <span class="spec-icon">📄</span>
+                                <span class="spec-icon"></span>
                                 <div class="spec-text">
                                     <strong>{{ product.format }}</strong>
                                     <span>Format</span>
                                 </div>
                             </div>
                             <div class="spec-item">
-                                <span class="spec-icon">🎨</span>
+                                <span class="spec-icon"></span>
                                 <div class="spec-text">
                                     <strong>{{ product.color === 'couleur' ? 'Couleur' : 'Monochrome' }}</strong>
                                     <span>Type</span>
@@ -79,10 +79,10 @@
 
                         <div class="cta-buttons">
                             <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp">
-                                📱 Demander un devis sur WhatsApp
+                                 Demander un devis sur WhatsApp
                             </a>
                             <a href="#contact" class="btn btn-secondary">
-                                📝 Remplir le formulaire
+                                Remplir le formulaire
                             </a>
                         </div>
 
@@ -128,7 +128,7 @@
                     <p>Nos conseillers sont disponibles pour vous accompagner dans votre choix</p>
                     <div class="cta-buttons">
                         <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp-large">
-                            💬 Contacter sur WhatsApp
+                          Contacter sur WhatsApp
                         </a>
                         <a href="tel:+22997559059" class="btn btn-call">
                             📞 Appeler: +229 97 55 90 59
@@ -167,7 +167,7 @@
         <section class="not-found" v-if="!product && !loading">
             <div class="container">
                 <div class="not-found-content">
-                    <span class="not-found-icon">🔍</span>
+                    <span class="not-found-icon"></span>
                     <h2>Produit non trouvé</h2>
                     <p>Le produit que vous recherchez n'existe pas ou n'est plus disponible.</p>
                     <router-link to="/#catalogue" class="btn btn-primary">

@@ -9,7 +9,7 @@
                 <!-- Texte d'introduction -->
                 <div class="contact-intro">
                     <h2 class="section-title">
-                        🎯 Vous cherchez une solution d'impression fiable ?
+                         Vous cherchez une solution d'impression fiable ?
                     </h2>
                     <p class="section-subtitle">
                         Contactez-nous dès maintenant pour un diagnostic gratuit
@@ -127,7 +127,7 @@
                                 :disabled="isSubmitting"
                             >
                                 <span v-if="isSubmitting">Envoi en cours...</span>
-                                <span v-else>📨 Envoyer ma demande</span>
+                                <span v-else>Envoyer ma demande</span>
                             </button>
                         </div>
                     </form>
@@ -135,7 +135,7 @@
                     <!-- Message de succès -->
                     <transition name="fade">
                         <div v-if="submitSuccess" class="success-message">
-                            <div class="success-icon">✅</div>
+                            <div class="success-icon"></div>
                             <h3>Demande envoyée avec succès !</h3>
                             <p>Nous vous contacterons très bientôt.</p>
                         </div>
@@ -153,15 +153,15 @@
                     </div>
                     
                     <div class="info-card">
-                        <div class="info-icon">📍</div>
+                        <div class="info-icon"></div>
                         <div class="info-content">
                             <strong>Adresse</strong>
-                            <span>Akpakpa, Bénin</span>
+                            <span>Sodjèatinmin, Bénin</span>
                         </div>
                     </div>
                     
                     <div class="info-card">
-                        <div class="info-icon">🕐</div>
+                        <div class="info-icon"></div>
                         <div class="info-content">
                             <strong>Horaires</strong>
                             <span>Lun - Ven: 8h - 17h30</span>

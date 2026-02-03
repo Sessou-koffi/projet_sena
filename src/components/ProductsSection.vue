@@ -24,13 +24,13 @@
                     :class="['filter-btn', { active: activeFilter === 'copieur' }]"
                     @click="activeFilter = 'copieur'"
                 >
-                    🖨️ Copieurs
+                    
                 </button>
                 <button 
                     :class="['filter-btn', { active: activeFilter === 'imprimante' }]"
                     @click="activeFilter = 'imprimante'"
                 >
-                    📠 Imprimantes
+                    
                 </button>
                 <button 
                     :class="['filter-btn', { active: activeFilter === 'couleur' }]"

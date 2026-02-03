@@ -30,7 +30,7 @@
                     class="btn btn-whatsapp"
                     @click="trackWhatsAppClick"
                 >
-                    <span class="whatsapp-icon">📱</span>
+                    <span class="whatsapp-icon"></span>
                     <span class="btn-text">Contactez-nous</span>
                 </a>
 
@@ -54,7 +54,7 @@
                     class="btn btn-whatsapp-mobile"
                     @click="trackWhatsAppClick"
                 >
-                    📱 Contacter sur WhatsApp
+                     Contacter sur WhatsApp
                 </a>
             </nav>
         </transition>

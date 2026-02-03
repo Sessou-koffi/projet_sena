@@ -98,7 +98,7 @@
             @click="trackWhatsAppClick"
             aria-label="Contacter sur WhatsApp"
         >
-            <span class="whatsapp-icon">💬</span>
+            <span class="whatsapp-icon"></span>
             <span class="whatsapp-tooltip">Besoin d'aide ?</span>
         </a>
     </footer>
@@ -286,7 +286,7 @@ const trackWhatsAppClick = () => {
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #25d366;
+    background: #8d341e;
     border-radius: 50%;
     display: flex;
     align-items: center;

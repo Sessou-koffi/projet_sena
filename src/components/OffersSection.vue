@@ -16,7 +16,7 @@
             <div class="offers-grid">
                 <!-- Offre 1: Imprimantes professionnelles -->
                 <div class="offer-card">
-                    <div class="offer-icon">🖨️</div>
+                    <div class="offer-icon"></div>
                     <h3 class="offer-title">Imprimantes professionnelles</h3>
                     <p class="offer-subtitle">Pour bureaux & PME</p>
                     
@@ -41,7 +41,7 @@
                 <!-- Offre 2: Copieurs professionnels -->
                 <div class="offer-card featured">
                     <div class="featured-badge">Populaire</div>
-                    <div class="offer-icon">📠</div>
+                    <div class="offer-icon"></div>
                     <h3 class="offer-title">Copieurs multifonctions</h3>
                     <p class="offer-subtitle">Pour entreprises & institutions</p>
                     
@@ -70,7 +70,7 @@
 
                 <!-- Offre 3: Services additionnels -->
                 <div class="offer-card">
-                    <div class="offer-icon">🔧</div>
+                    <div class="offer-icon"></div>
                     <h3 class="offer-title">Services additionnels</h3>
                     <p class="offer-subtitle">Support complet</p>
                     
@@ -144,7 +144,7 @@
                                     class="btn btn-sm btn-secondary"
                                     @click="downloadFiche(produit)"
                                 >
-                                    📄 Fiche technique
+                                     Fiche technique
                                 </button>
                             </div>
                         </div>

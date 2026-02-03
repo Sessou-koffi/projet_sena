@@ -64,7 +64,7 @@
                         class="btn btn-primary"
                         @click="trackWhatsAppClick('copieur')"
                     >
-                        <span>📱</span> Demander un devis
+                        Demander un devis
                     </a>
                 </div>
 
@@ -75,11 +75,11 @@
                     <p class="offer-subtitle">Support complet</p>
                     
                     <ul class="offer-features">
-                        <li>✔ Maintenance préventive et corrective</li>
-                        <li>✔ Fourniture d'encres et consommables</li>
-                        <li>✔ Assistance technique rapide</li>
-                        <li>✔ Contrats de maintenance sur mesure</li>
-                        <li>✔ Formation des utilisateurs</li>
+                        <li>Maintenance préventive et corrective</li>
+                        <li>Fourniture d'encres et consommables</li>
+                        <li>Assistance technique rapide</li>
+                        <li>Contrats de maintenance sur mesure</li>
+                        <li>Formation des utilisateurs</li>
                     </ul>
 
                     <div class="offer-price">

@@ -14,7 +14,7 @@
 
                     <div class="solution-list">
                         <div class="solution-item" v-for="(solution, index) in solutions" :key="index">
-                            <span class="solution-check">✔</span>
+                            <span class="solution-check">•</span>
                             <span class="solution-label">{{ solution }}</span>
                         </div>
                     </div>

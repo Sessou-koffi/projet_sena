@@ -24,19 +24,21 @@
                     <div class="product-gallery">
                         <div class="main-image">
                             <img :src="product.image" :alt="product.name" />
-                            <div class="badges">
-                                <span :class="['badge', product.type]">
-                                    {{ product.type === 'copieur' ? 'Copieur' : 'Imprimante' }}
-                                </span>
-                                <span :class="['badge', product.color]">
-                                    {{ product.color === 'couleur' ? ' Couleur' : '⚫ N&B' }}
-                                </span>
-                            </div>
                         </div>
                     </div>
 
                     <!-- Infos principales -->
                     <div class="product-info">
+                        <!-- Badges catégorie -->
+                        <div class="product-badges">
+                            <span :class="['badge', product.type]">
+                                {{ product.type === 'copieur' ? 'Copieur' : 'Imprimante' }}
+                            </span>
+                            <span :class="['badge', product.color]">
+                                {{ product.color === 'couleur' ? 'Couleur' : 'N&B' }}
+                            </span>
+                        </div>
+                        
                         <span class="brand">{{ product.brand }}</span>
                         <h1 class="name">{{ product.name }}</h1>
                         
@@ -44,24 +46,21 @@
 
                         <div class="quick-specs">
                             <div class="spec-item">
-                                <span class="spec-icon">⚡</span>
+                                <span class="spec-icon">Vitesse</span>
                                 <div class="spec-text">
                                     <strong>{{ product.speed }} ppm</strong>
-                                    <span>Vitesse</span>
                                 </div>
                             </div>
                             <div class="spec-item">
-                                <span class="spec-icon"></span>
+                                <span class="spec-icon">Format</span>
                                 <div class="spec-text">
                                     <strong>{{ product.format }}</strong>
-                                    <span>Format</span>
                                 </div>
                             </div>
                             <div class="spec-item">
-                                <span class="spec-icon"></span>
+                                <span class="spec-icon">Type</span>
                                 <div class="spec-text">
                                     <strong>{{ product.color === 'couleur' ? 'Couleur' : 'Monochrome' }}</strong>
-                                    <span>Type</span>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +81,7 @@
                                  Demander un devis sur WhatsApp
                             </a>
                             <a href="#contact" class="btn btn-secondary">
-                                Remplir le formulaire
+                              Remplir le formulaire
                             </a>
                         </div>
 
@@ -113,7 +112,7 @@
                         v-for="(feature, index) in product.features" 
                         :key="index"
                     >
-                        <span class="feature-icon">✔</span>
+                        <span class="feature-icon">•</span>
                         <span class="feature-text">{{ feature }}</span>
                     </div>
                 </div>
@@ -131,7 +130,7 @@
                           Contacter sur WhatsApp
                         </a>
                         <a href="tel:+22997559059" class="btn btn-call">
-                            📞 Appeler: +229 97 55 90 59
+                            Appeler: +229 97 55 90 59
                         </a>
                     </div>
                 </div>
@@ -616,12 +615,11 @@ watch(() => route.params.slug, (newSlug) => {
     object-fit: cover;
 }
 
-.badges {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+/* Badges dans product-info */
+.product-badges {
     display: flex;
     gap: 10px;
+    margin-bottom: 15px;
 }
 
 .badge {

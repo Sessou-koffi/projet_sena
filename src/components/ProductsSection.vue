@@ -36,13 +36,13 @@
                     :class="['filter-btn', { active: activeFilter === 'couleur' }]"
                     @click="activeFilter = 'couleur'"
                 >
-                    🎨 Couleur
+                     Couleur
                 </button>
                 <button 
                     :class="['filter-btn', { active: activeFilter === 'monochrome' }]"
                     @click="activeFilter = 'monochrome'"
                 >
-                    ⚫ Monochrome
+                     Monochrome
                 </button>
             </div>
 
@@ -54,26 +54,26 @@
                     class="product-card"
                     @click="goToProduct(product.slug)"
                 >
-                    <!-- Badge catégorie -->
-                    <div class="product-badges">
-                        <span :class="['badge', product.type]">
-                            {{ product.type === 'copieur' ? 'Copieur' : 'Imprimante' }}
-                        </span>
-                        <span :class="['badge', product.color]">
-                            {{ product.color === 'couleur' ? '🎨 Couleur' : '⚫ N&B' }}
-                        </span>
-                    </div>
-
                     <!-- Image produit -->
                     <div class="product-image">
                         <img :src="product.image" :alt="product.name" />
                         <div class="product-overlay">
-                            <span class="view-btn">Voir détails →</span>
+                            <span class="view-btn">Voir détails</span>
                         </div>
                     </div>
 
                     <!-- Infos produit -->
                     <div class="product-info">
+                        <!-- Badge catégorie -->
+                        <div class="product-badges">
+                            <span :class="['badge', product.type]">
+                                {{ product.type === 'copieur' ? 'Copieur' : 'Imprimante' }}
+                            </span>
+                            <span :class="['badge', product.color]">
+                                {{ product.color === 'couleur' ? 'Couleur' : 'N&B' }}
+                            </span>
+                        </div>
+                        
                         <span class="product-brand">{{ product.brand }}</span>
                         <h3 class="product-name">{{ product.name }}</h3>
                         
@@ -94,7 +94,7 @@
                         </div>
 
                         <button class="btn-devis" @click.stop="requestDevis(product)">
-                            📱 Demander un devis
+                            Demander un devis
                         </button>
                     </div>
                 </div>
@@ -491,12 +491,9 @@ const requestDevis = (product) => {
 
 /* Badges */
 .product-badges {
-    position: absolute;
-    top: 15px;
-    left: 15px;
     display: flex;
     gap: 8px;
-    z-index: 10;
+    margin-bottom: 10px;
 }
 
 .badge {

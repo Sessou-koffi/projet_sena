@@ -22,7 +22,6 @@
                         class="btn btn-whatsapp btn-large"
                         @click="trackWhatsAppClick"
                     >
-                        <span class="btn-icon">📱</span>
                         Parler à un conseiller sur WhatsApp
                     </a>
 

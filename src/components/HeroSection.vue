@@ -40,7 +40,6 @@
                             class="btn btn-primary btn-large"
                             @click="handleCtaClick"
                         >
-                            <span class="btn-icon">📱</span>
                             Demander un devis gratuit sur WhatsApp
                         </a>
                         

@@ -115,6 +115,17 @@
 import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 
+// Import des images produits
+import img2525AC from '../assets/TOSHIBA_STUDIO_2525_couleur.png';
+import img2528A from '../assets/TOSHIBA_STUDIO_2528_A.png';
+import img2508A from '../assets/TOSHIBA_STUDIO_2508_A.png';
+import img2518A from '../assets/TOSHIBA_STUDIO_18_A.png';
+import imgB235 from '../assets/XEROW_B_235.png';
+import imgB400 from '../assets/XEROX_B400.png';
+import img409AS from '../assets/Toshiba_E_STUDIO_409AS.png';
+import img409CS from '../assets/Toshiba_E_STUDIO_409CS.png';
+import img339CS from '../assets/Toshiba_E-STUDIO.png';
+
 const router = useRouter();
 
 /**
@@ -145,7 +156,7 @@ const products = ref([
         speed: '25',
         priceHT: 4775000,
         priceTTC: 5634500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop',
+        image: img2525AC,
         description: 'Système multifonction couleur A3/A4 conçu pour les environnements de bureau.',
         features: [
             'Multifonction couleur (impression, copie, numérisation, télécopie en option)',
@@ -168,7 +179,7 @@ const products = ref([
         speed: '25',
         priceHT: 3785000,
         priceTTC: 4466300,
-        image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&h=300&fit=crop',
+        image: img2528A,
         description: 'Système multifonction monochrome A3 performant pour la gestion documentaire professionnelle.',
         features: [
             'Impressions, copies, numérisations (télécopie en option)',
@@ -191,7 +202,7 @@ const products = ref([
         speed: '25',
         priceHT: 2600000,
         priceTTC: 3068000,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop',
+        image: img2508A,
         description: 'Système multifonction monochrome A3/A4 pour optimiser les flux de travail bureautiques.',
         features: [
             'Impressions, copies, numérisations (télécopie en option)',
@@ -214,7 +225,7 @@ const products = ref([
         speed: '25',
         priceHT: 3300000,
         priceTTC: 3894000,
-        image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?w=400&h=300&fit=crop',
+        image: img2518A,
         description: 'Photocopieur multifonction laser A3 monochrome avec scan couleur et contrôleur e-BRIDGE Next.',
         features: [
             'Impression, copie, scan couleur, fax (option)',
@@ -238,7 +249,7 @@ const products = ref([
         speed: '34-36',
         priceHT: null,
         priceTTC: 365000,
-        image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=300&fit=crop',
+        image: imgB235,
         description: 'Imprimante multifonction laser monochrome A4 compacte, idéale pour PME et télétravail.',
         features: [
             'Impression, copie, numérisation, télécopie',
@@ -262,7 +273,7 @@ const products = ref([
         speed: '40',
         priceHT: null,
         priceTTC: 380000,
-        image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400&h=300&fit=crop',
+        image: imgB400,
         description: 'Imprimante monochrome A4 haute performance pour équipes de 3 à 15 utilisateurs.',
         features: [
             'Impression monochrome haute vitesse',
@@ -286,7 +297,7 @@ const products = ref([
         speed: '40-42',
         priceHT: 525000,
         priceTTC: 619500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop',
+        image: img409AS,
         description: 'Multifonction monochrome compact A4 haute productivité et faible consommation.',
         features: [
             'Impression, copie, scan, fax monochrome',
@@ -310,7 +321,7 @@ const products = ref([
         speed: '40-42',
         priceHT: 417000,
         priceTTC: 492060,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop',
+        image: img409CS,
         description: 'Multifonction laser couleur A4 compacte et performante pour petits groupes de travail.',
         features: [
             'Impression, copie, scan et fax couleur',
@@ -334,7 +345,7 @@ const products = ref([
         speed: '33',
         priceHT: 625000,
         priceTTC: 737500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop',
+        image: img339CS,
         description: 'Multifonction laser couleur A4 compacte et robuste, idéale pour les PME.',
         features: [
             'Impression, copie, scan et fax couleur',

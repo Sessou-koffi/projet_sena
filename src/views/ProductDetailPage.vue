@@ -6,6 +6,11 @@
         <!-- Hero produit -->
         <section class="product-hero">
             <div class="container">
+                <!-- Bouton retour -->
+                <button class="back-button" @click="goBack">
+                    ← Retour au catalogue
+                </button>
+                
                 <div class="breadcrumb">
                     <router-link to="/">Accueil</router-link>
                     <span>/</span>
@@ -83,13 +88,13 @@
 
                         <div class="guarantees">
                             <div class="guarantee">
-                                <span>✅</span> Livraison & installation incluses
+                                <span></span> Livraison & installation incluses
                             </div>
                             <div class="guarantee">
-                                <span>✅</span> Garantie constructeur
+                                <span></span> Garantie constructeur
                             </div>
                             <div class="guarantee">
-                                <span>✅</span> Support technique disponible
+                                <span></span> Support technique disponible
                             </div>
                         </div>
                     </div>
@@ -178,11 +183,29 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
+// Import des images locales
+import img2525AC from '../assets/TOSHIBA_STUDIO_2525_couleur.png';
+import img2528A from '../assets/TOSHIBA_STUDIO_2528_A.png';
+import img2508A from '../assets/TOSHIBA_STUDIO_2508_A.png';
+import img2518A from '../assets/TOSHIBA_STUDIO_18_A.png';
+import imgB235 from '../assets/XEROW_B_235.png';
+import imgB400 from '../assets/XEROX_B400.png';
+import img409AS from '../assets/Toshiba_E_STUDIO_409AS.png';
+import img409CS from '../assets/Toshiba_E_STUDIO_409CS.png';
+import img339CS from '../assets/Toshiba_E-STUDIO.png';
+
 const route = useRoute();
 const router = useRouter();
 
 const loading = ref(true);
 const product = ref(null);
+
+/**
+ * Retour au catalogue
+ */
+const goBack = () => {
+    router.push('/#catalogue');
+};
 
 /**
  * Configuration WhatsApp
@@ -210,7 +233,7 @@ const allProducts = [
         speed: '25',
         priceHT: 4775000,
         priceTTC: 5634500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop',
+        image: img2525AC,
         description: 'Système multifonction couleur A3/A4 conçu pour les environnements de bureau, offrant des fonctionnalités complètes d\'impression, de copie, de numérisation et, en option, de télécopie.',
         features: [
             'Multifonction couleur (impression, copie, numérisation, télécopie en option)',
@@ -236,7 +259,7 @@ const allProducts = [
         speed: '25',
         priceHT: 3785000,
         priceTTC: 4466300,
-        image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&h=400&fit=crop',
+        image: img2528A,
         description: 'Système multifonction monochrome A3 performant, conçu pour les besoins d\'impression et de gestion de documents professionnels, offrant vitesse, sécurité et polyvalence.',
         features: [
             'Impressions, copies, numérisations (télécopie en option)',
@@ -262,7 +285,7 @@ const allProducts = [
         speed: '25',
         priceHT: 2600000,
         priceTTC: 3068000,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop',
+        image: img2508A,
         description: 'Système multifonction monochrome A3/A4 conçu pour optimiser les flux de travail bureautiques avec une excellente productivité.',
         features: [
             'Impressions, copies, numérisations (télécopie en option)',
@@ -289,7 +312,7 @@ const allProducts = [
         speed: '25',
         priceHT: 3300000,
         priceTTC: 3894000,
-        image: 'https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&h=400&fit=crop',
+        image: img2518A,
         description: 'Photocopieur multifonction laser A3 monochrome avec scan couleur, conçu pour les entreprises avec des flux de travail complexes.',
         features: [
             'Impression, copie, numérisation couleur, fax (option)',
@@ -317,7 +340,7 @@ const allProducts = [
         speed: '34-36',
         priceHT: null,
         priceTTC: 365000,
-        image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=600&h=400&fit=crop',
+        image: imgB235,
         description: 'Imprimante multifonction laser monochrome A4 compacte, idéale pour les petites entreprises ou le télétravail avec une excellente connectivité.',
         features: [
             'Impression, copie, numérisation, télécopie',
@@ -345,7 +368,7 @@ const allProducts = [
         speed: '40',
         priceHT: null,
         priceTTC: 380000,
-        image: 'https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=600&h=400&fit=crop',
+        image: imgB400,
         description: 'Imprimante monochrome A4 haute performance avec excellente prise en charge de l\'impression mobile et connectivité Cloud native.',
         features: [
             'Impression monochrome haute vitesse',
@@ -371,7 +394,7 @@ const allProducts = [
         speed: '40-42',
         priceHT: 525000,
         priceTTC: 619500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop',
+        image: img409AS,
         description: 'Multifonction monochrome compact A4 offrant haute productivité avec faible consommation d\'énergie.',
         features: [
             'Impression, copie, scan, fax monochrome',
@@ -398,7 +421,7 @@ const allProducts = [
         speed: '40-42',
         priceHT: 417000,
         priceTTC: 492060,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop',
+        image: img409CS,
         description: 'Multifonction laser couleur A4 compacte et performante, idéale pour les petits groupes de travail avec de nombreuses fonctionnalités.',
         features: [
             'Impression, copie, scan et fax couleur',
@@ -425,7 +448,7 @@ const allProducts = [
         speed: '33',
         priceHT: 625000,
         priceTTC: 737500,
-        image: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600&h=400&fit=crop',
+        image: img339CS,
         description: 'Multifonction laser couleur A4 compacte et robuste, idéale pour les PME avec un châssis en acier durable.',
         features: [
             'Impression, copie, scan et fax couleur',
@@ -499,6 +522,29 @@ watch(() => route.params.slug, loadProduct);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+/* Bouton retour */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background: #DC2626;
+    color: white;
+    border-color: #DC2626;
 }
 
 /* Breadcrumb */
@@ -711,13 +757,13 @@ watch(() => route.params.slug, loadProduct);
 }
 
 .btn-whatsapp {
-    background: #25d366;
+    background: #ac2e2e;
     color: white;
     flex: 1;
 }
 
 .btn-whatsapp:hover {
-    background: #128c7e;
+    background: #e45e46;
     transform: translateY(-2px);
 }
 
@@ -788,7 +834,7 @@ watch(() => route.params.slug, loadProduct);
 }
 
 .feature-icon {
-    color: #22c55e;
+    color: #102417;
     font-size: 1.2rem;
     flex-shrink: 0;
 }
@@ -826,14 +872,15 @@ watch(() => route.params.slug, loadProduct);
 }
 
 .btn-whatsapp-large {
-    background: #25d366;
+    background: 
+    #883429;
     color: white;
     padding: 18px 35px;
     font-size: 1.1rem;
 }
 
 .btn-whatsapp-large:hover {
-    background: #128c7e;
+    background: #b93d38;
     transform: translateY(-3px);
 }
 

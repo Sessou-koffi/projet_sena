@@ -390,7 +390,7 @@ const formatPrice = (price) => {
  * Naviguer vers la page détail du produit
  */
 const goToProduct = (slug) => {
-    router.push(`/produit/${slug}`);
+    router.push({ name: 'ProduitDetail', params: { slug } });
 };
 
 /**

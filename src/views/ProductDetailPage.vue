@@ -204,7 +204,15 @@ const product = ref(null);
  * Retour au catalogue
  */
 const goBack = () => {
-    router.push('/#catalogue');
+    router.push('/').then(() => {
+        // Attendre que la navigation soit complète puis scroller vers le catalogue
+        setTimeout(() => {
+            const catalogueSection = document.getElementById('catalogue');
+            if (catalogueSection) {
+                catalogueSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
+    });
 };
 
 /**
@@ -497,19 +505,23 @@ const loadProduct = () => {
     loading.value = false;
     
     // Scroll to top
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
 };
 
 /**
  * Naviguer vers un autre produit
  */
 const goToProduct = (slug) => {
-    router.push(`/produit/${slug}`);
+    router.push({ name: 'ProduitDetail', params: { slug } });
 };
 
 // Charger le produit au montage et quand le slug change
 onMounted(loadProduct);
-watch(() => route.params.slug, loadProduct);
+watch(() => route.params.slug, (newSlug) => {
+    if (newSlug) {
+        loadProduct();
+    }
+}, { immediate: true });
 </script>
 
 <style scoped>

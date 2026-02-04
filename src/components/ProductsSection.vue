@@ -95,7 +95,7 @@
                     <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp">
                         Contactez-nous sur WhatsApp
                     </a>
-                    <a href="/catalogue-sena.pdf" download class="btn btn-download">
+                    <a :href="cataloguePdfUrl" download="catalogue-sena.pdf" class="btn btn-download">
                         Télécharger le catalogue PDF
                     </a>
                 </div>
@@ -132,6 +132,11 @@ const activeFilter = ref('all');
 const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite des informations sur vos produits.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
+
+/**
+ * URL du catalogue PDF (avec base path pour GitHub Pages)
+ */
+const cataloguePdfUrl = `${import.meta.env.BASE_URL}catalogue-sena.pdf`;
 
 /**
  * Liste des produits du catalogue

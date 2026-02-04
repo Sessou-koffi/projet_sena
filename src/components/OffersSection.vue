@@ -28,8 +28,7 @@
                     </ul>
 
                     <div class="offer-price">
-                        <span class="price-label">Solutions disponibles à partir de</span>
-                        <span class="price-value">450 000 FCFA</span>
+                        <span class="price-label">Solutions disponibles </span>
                         <span class="price-note">selon configuration</span>
                     </div>
 
@@ -53,8 +52,7 @@
                     </ul>
 
                     <div class="offer-price">
-                        <span class="price-label">Solutions disponibles à partir de</span>
-                        <span class="price-value"> 500 000 FCFA</span>
+                        <span class="price-label">Solutions disponibles </span>
                         <span class="price-note">selon volume et fonctionnalités</span>
                     </div>
 

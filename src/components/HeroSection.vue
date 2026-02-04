@@ -91,6 +91,17 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { analyticsService } from '../services/api';
 
+// Import des images produits
+import img2525AC from '../assets/TOSHIBA_STUDIO_2525_couleur.png';
+import img2528A from '../assets/TOSHIBA_STUDIO_2528_A.png';
+import img2508A from '../assets/TOSHIBA_STUDIO_2508_A.png';
+import img2518A from '../assets/TOSHIBA_STUDIO_18_A.png';
+import imgB235 from '../assets/XEROW_B_235.png';
+import imgB400 from '../assets/XEROX_B400.png';
+import img409AS from '../assets/Toshiba_E_STUDIO_409AS.png';
+import img409CS from '../assets/Toshiba_E_STUDIO_409CS.png';
+import img339CS from '../assets/Toshiba_E-STUDIO.png';
+
 /**
  * Configuration WhatsApp
  */
@@ -99,24 +110,53 @@ const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devi
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
 /**
- * Images du slider
- * À remplacer par les vraies images des produits
+ * Images du slider - Produits réels
  */
 const sliderImages = ref([
     {
-        src: 'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=600',
-        alt: 'Copieur multifonction professionnel',
-        caption: 'Copieurs multifonctions haute performance'
+        src: img2525AC,
+        alt: 'TOSHIBA e-STUDIO 2525AC',
+        caption: 'TOSHIBA e-STUDIO 2525AC - Copieur couleur A3/A4'
     },
-    // {
-    //     src: '../impri.png',
-    //     alt: 'Imprimante professionnelle',
-    //     caption: 'Imprimantes professionnelles pour bureaux'
-    // },
     {
-        src: 'https://images.unsplash.com/photo-1562408590-e32931084e23?w=600',
-        alt: 'Service de maintenance',
-        caption: 'Service de maintenance et support'
+        src: img2528A,
+        alt: 'TOSHIBA e-STUDIO 2528A',
+        caption: 'TOSHIBA e-STUDIO 2528A - Copieur monochrome A3'
+    },
+    {
+        src: img2508A,
+        alt: 'TOSHIBA e-STUDIO 2508A',
+        caption: 'TOSHIBA e-STUDIO 2508A - Copieur monochrome A3/A4'
+    },
+    {
+        src: img2518A,
+        alt: 'TOSHIBA e-STUDIO 2518A',
+        caption: 'TOSHIBA e-STUDIO 2518A - Copieur multifonction A3'
+    },
+    {
+        src: imgB235,
+        alt: 'XEROX B235',
+        caption: 'XEROX B235 - Imprimante multifonction A4'
+    },
+    {
+        src: imgB400,
+        alt: 'XEROX B400',
+        caption: 'XEROX B400 - Imprimante haute performance A4'
+    },
+    {
+        src: img409AS,
+        alt: 'TOSHIBA e-STUDIO 409AS',
+        caption: 'TOSHIBA e-STUDIO 409AS - Multifonction monochrome A4'
+    },
+    {
+        src: img409CS,
+        alt: 'TOSHIBA e-STUDIO 409CS',
+        caption: 'TOSHIBA e-STUDIO 409CS - Multifonction couleur A4'
+    },
+    {
+        src: img339CS,
+        alt: 'TOSHIBA e-STUDIO 339CS',
+        caption: 'TOSHIBA e-STUDIO 339CS - Multifonction couleur A4'
     }
 ]);
 

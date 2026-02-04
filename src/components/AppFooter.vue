@@ -65,15 +65,15 @@
                             <a href="tel:+22997559059">+229 97 55 90 59</a>
                         </li>
                         <li>
-                            <span class="contact-icon">📱</span>
+                            <span class="contact-icon"></span>
                             <a :href="whatsappUrl" target="_blank">WhatsApp</a>
                         </li>
                         <li>
-                            <span class="contact-icon">✉️</span>
+                            <span class="contact-icon"></span>
                             <a href="mailto:contact@sena-print.bj">contact@sena-print.bj</a>
                         </li>
                         <li>
-                            <span class="contact-icon">📍</span>
+                            <span class="contact-icon"></span>
                             <span>Cotonou, Bénin</span>
                         </li>
                     </ul>
@@ -286,7 +286,7 @@ const trackWhatsAppClick = () => {
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #8d341e;
+    background: #3ac751;
     border-radius: 50%;
     display: flex;
     align-items: center;

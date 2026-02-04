@@ -7,6 +7,9 @@
         <!-- Hero Section -->
         <HeroSection />
         
+        <!-- Section Catalogue Produits (juste après le hero) -->
+        <ProductsSection />
+        
         <!-- Section Problèmes clients -->
         <ProblemsSection />
         
@@ -15,9 +18,6 @@
         
         <!-- Section Offres commerciales -->
         <OffersSection @open-devis-modal="openDevisModal" />
-        
-        <!-- Section Catalogue Produits -->
-        <ProductsSection />
         
         <!-- Section Clients de confiance + Témoignages (désactivée) -->
         <!-- <TrustSection /> -->

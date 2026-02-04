@@ -24,25 +24,13 @@
                     :class="['filter-btn', { active: activeFilter === 'copieur' }]"
                     @click="activeFilter = 'copieur'"
                 >
-                    
+                    Copieurs
                 </button>
                 <button 
                     :class="['filter-btn', { active: activeFilter === 'imprimante' }]"
                     @click="activeFilter = 'imprimante'"
                 >
-                    
-                </button>
-                <button 
-                    :class="['filter-btn', { active: activeFilter === 'couleur' }]"
-                    @click="activeFilter = 'couleur'"
-                >
-                     Couleur
-                </button>
-                <button 
-                    :class="['filter-btn', { active: activeFilter === 'monochrome' }]"
-                    @click="activeFilter = 'monochrome'"
-                >
-                     Monochrome
+                    Imprimantes bureau
                 </button>
             </div>
 

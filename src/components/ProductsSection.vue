@@ -91,9 +91,14 @@
             <!-- CTA bas de section -->
             <div class="section-cta">
                 <p>Vous ne trouvez pas ce que vous cherchez ?</p>
-                <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp">
-                    💬 Contactez-nous sur WhatsApp
-                </a>
+                <div class="cta-buttons">
+                    <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp">
+                        Contactez-nous sur WhatsApp
+                    </a>
+                    <a href="/catalogue-sena.pdf" download class="btn btn-download">
+                        Télécharger le catalogue PDF
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -648,6 +653,13 @@ const requestDevis = (product) => {
     opacity: 0.9;
 }
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -666,6 +678,26 @@ const requestDevis = (product) => {
     background: #128c7e;
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    background: #DC2626;
+    color: white;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-download:hover {
+    background: #b91c1c;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
 }
 
 /* Responsive */

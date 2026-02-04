@@ -69,10 +69,14 @@
                 <div class="footer-qr">
                     <h4>Scannez-nous</h4>
                     <div class="qr-code-section">
-                        <div class="qr-code-placeholder">
-                            <div class="qr-mock">QR</div>
-                        </div>
-                        <p class="qr-label">Contactez-nous rapidement</p>
+                        <a :href="whatsappUrl" target="_blank" class="qr-code-link">
+                            <img 
+                                :src="qrCodeUrl" 
+                                alt="QR Code WhatsApp SENA & FILS" 
+                                class="qr-code-img"
+                            />
+                        </a>
+                        <p class="qr-label">Scannez pour nous contacter sur WhatsApp</p>
                     </div>
                 </div>
             </div>
@@ -116,6 +120,14 @@ const currentYear = new Date().getFullYear();
 const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, j\'aimerais avoir plus d\'informations sur vos solutions d\'impression.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
+
+/**
+ * QR Code dynamique vers WhatsApp (utilise l'API gratuite qrserver.com)
+ */
+const qrCodeUrl = computed(() => {
+    const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+    return `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(whatsappLink)}`;
+});
 
 /**
  * Tracker le clic WhatsApp
@@ -183,26 +195,29 @@ const trackWhatsAppClick = () => {
     text-align: center;
 }
 
-.qr-label {
-    font-size: 0.85rem;
-    margin-top: 10px;
-    color: #94a3b8;
-}
-
-.qr-code-placeholder {
-    width: 100px;
-    height: 100px;
+.qr-code-link {
+    display: inline-block;
+    padding: 8px;
     background: white;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.qr-mock {
-    color: #1a1a1a;
-    font-weight: 700;
-    font-size: 1.5rem;
+.qr-code-link:hover {
+    transform: scale(1.05);
+}
+
+.qr-code-img {
+    width: 120px;
+    height: 120px;
+    display: block;
+}
+
+.qr-label {
+    font-size: 0.8rem;
+    margin-top: 12px;
+    color: #94a3b8;
+    line-height: 1.4;
 }
 
 /* Footer links */

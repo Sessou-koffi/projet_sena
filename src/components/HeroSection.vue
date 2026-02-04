@@ -299,8 +299,9 @@ onUnmounted(() => {
 /* Boutons CTA */
 .hero-cta {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 15px;
+    align-items: center;
 }
 
 .btn {

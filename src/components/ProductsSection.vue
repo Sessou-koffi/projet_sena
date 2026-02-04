@@ -517,13 +517,14 @@ const requestDevis = (product) => {
     position: relative;
     height: 220px;
     overflow: hidden;
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    background: #f8f9fa;
 }
 
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    padding: 10px;
     transition: transform 0.5s ease;
 }
 

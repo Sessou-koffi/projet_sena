@@ -10,24 +10,11 @@
                 <div class="footer-brand">
                     <div class="footer-logo">
                         <img src="../assets/logo.png" alt="SENA & FILS" class="logo-img" />
-                        <!-- <span class="logo-text">
-                            <strong>SENA & FILS</strong> <br/>
-                            <small>Copieurs & Imprimantes</small>
-                        </span>                    -->
                     </div>
                     <p class="footer-description">
                         Votre partenaire pour des solutions d'impression professionnelles 
                         au Bénin. Vente, maintenance et fournitures pour entreprises et institutions.
                     </p>
-                    
-                    <!-- QR Code pour le terrain -->
-                    <div class="qr-code-section">
-                        <p class="qr-label">Scannez pour nous contacter :</p>
-                        <div class="qr-code-placeholder">
-                            <!-- À remplacer par un vrai QR Code -->
-                            <div class="qr-mock">QR</div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Liens rapides -->
@@ -38,7 +25,6 @@
                         <li><a href="#produits">Nos produits</a></li>
                         <li><a href="#processus">Comment ça marche</a></li>
                         <li><a href="#temoignages">Témoignages</a></li>
-                        <!-- <li><router-link to="/showroom">Showroom</router-link></li> -->
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -78,6 +64,17 @@
                         </li>
                     </ul>
                 </div>
+
+                <!-- QR Code pour le terrain -->
+                <div class="footer-qr">
+                    <h4>Scannez-nous</h4>
+                    <div class="qr-code-section">
+                        <div class="qr-code-placeholder">
+                            <div class="qr-mock">QR</div>
+                        </div>
+                        <p class="qr-label">Contactez-nous rapidement</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Barre de copyright -->
@@ -98,7 +95,7 @@
             @click="trackWhatsAppClick"
             aria-label="Contacter sur WhatsApp"
         >
-            <span class="whatsapp-icon"></span>
+            <span class="whatsapp-icon">📱</span>
             <span class="whatsapp-tooltip">Besoin d'aide ?</span>
         </a>
     </footer>
@@ -143,8 +140,8 @@ const trackWhatsAppClick = () => {
 
 .footer-content {
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
     padding-bottom: 50px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -176,15 +173,19 @@ const trackWhatsAppClick = () => {
 }
 
 /* QR Code */
+.footer-qr h4 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
 .qr-code-section {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 10px;
+    text-align: center;
 }
 
 .qr-label {
     font-size: 0.85rem;
-    margin-bottom: 10px;
+    margin-top: 10px;
     color: #94a3b8;
 }
 

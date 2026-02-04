@@ -379,7 +379,8 @@ onUnmounted(() => {
 .slide img {
     width: 100%;
     height: 350px;
-    object-fit: cover;
+    object-fit: contain;
+    background: #f8f9fa;
 }
 
 .slide-caption {

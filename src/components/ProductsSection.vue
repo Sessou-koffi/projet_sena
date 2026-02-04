@@ -134,9 +134,9 @@ const whatsappMessage = encodeURIComponent('Bonjour, je souhaite des information
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
 /**
- * URL du catalogue PDF (avec base path pour GitHub Pages)
+ * URL du catalogue PDF
  */
-const cataloguePdfUrl = `${import.meta.env.BASE_URL}catalogue-sena.pdf`;
+const cataloguePdfUrl = import.meta.env.BASE_URL + 'catalogue-sena.pdf';
 
 /**
  * Liste des produits du catalogue

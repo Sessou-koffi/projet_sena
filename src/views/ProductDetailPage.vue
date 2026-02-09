@@ -129,8 +129,8 @@
                         <a :href="whatsappUrl" target="_blank" class="btn btn-whatsapp-large">
                           Contacter sur WhatsApp
                         </a>
-                        <a href="tel:+22997559059" class="btn btn-call">
-                            Appeler: +229 97 55 90 59
+                        <a href="tel:+22901918938" class="btn btn-call">
+                            Appeler: +229 01 91 89 89 38
                         </a>
                     </div>
                 </div>
@@ -217,7 +217,7 @@ const goBack = () => {
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22997559059';
+const whatsappNumber = '22901918938';
 const whatsappUrl = computed(() => {
     if (!product.value) return '';
     const message = encodeURIComponent(`Bonjour, je suis intéressé par le ${product.value.brand} ${product.value.name} (${formatPrice(product.value.priceTTC)} TTC). Pouvez-vous me donner plus d'informations ?`);

@@ -83,7 +83,7 @@ const solutions = ref([
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22997559059';
+const whatsappNumber = '22901918938';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite un devis pour des solutions d\'impression professionnelles.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

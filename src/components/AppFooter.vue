@@ -48,7 +48,7 @@
                     <ul>
                         <li>
                             <span class="contact-icon">📞</span>
-                            <a href="tel:+22997559059">+229 97 55 90 59</a>
+                            <a href="tel:+22901918938">+229 01 91 89 89 38</a>
                         </li>
                         <li>
                             <span class="contact-icon"></span>
@@ -56,11 +56,11 @@
                         </li>
                         <li>
                             <span class="contact-icon"></span>
-                            <a href="mailto:contact@sena-print.bj">contact@sena-print.bj</a>
+                            <a href="mailto:info@groupesenaetfils.com">info@groupesenaetfils.com</a>
                         </li>
                         <li>
                             <span class="contact-icon"></span>
-                            <span>Cotonou, Bénin</span>
+                            <span>BP 1954, Cotonou, Bénin</span>
                         </li>
                     </ul>
                 </div>
@@ -117,7 +117,7 @@ const currentYear = new Date().getFullYear();
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22997559059';
+const whatsappNumber = '22901918938';
 const whatsappMessage = encodeURIComponent('Bonjour, j\'aimerais avoir plus d\'informations sur vos solutions d\'impression.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

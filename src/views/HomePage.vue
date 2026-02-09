@@ -16,9 +16,6 @@
         <!-- Section Solution proposée -->
         <SolutionSection />
         
-        <!-- Section Offres commerciales -->
-        <OffersSection @open-devis-modal="openDevisModal" />
-        
         <!-- Section Clients de confiance + Témoignages (désactivée) -->
         <!-- <TrustSection /> -->
         
@@ -34,7 +31,7 @@
 import HeroSection from '../components/HeroSection.vue';
 import ProblemsSection from '../components/ProblemsSection.vue';
 import SolutionSection from '../components/SolutionSection.vue';
-import OffersSection from '../components/OffersSection.vue';
+// import OffersSection from '../components/OffersSection.vue';
 import ProductsSection from '../components/ProductsSection.vue';
 // import TrustSection from '../components/TrustSection.vue';
 import ProcessSection from '../components/ProcessSection.vue';

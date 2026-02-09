@@ -147,7 +147,7 @@
                         <div class="info-icon">📞</div>
                         <div class="info-content">
                             <strong>Téléphone</strong>
-                            <a href="tel:+22997559059">+229 97 55 90 59</a>
+                            <a href="tel:+22901918938">+229 01 91 89 89 38</a>
                         </div>
                     </div>
                     
@@ -155,7 +155,7 @@
                         <div class="info-icon"></div>
                         <div class="info-content">
                             <strong>Adresse</strong>
-                            <span>Sodjèatinmin, Bénin</span>
+                            <span>BP 1954, Cotonou, Bénin</span>
                         </div>
                     </div>
                     
@@ -196,7 +196,7 @@ const submitSuccess = ref(false);
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22997559059';
+const whatsappNumber = '22901918938';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

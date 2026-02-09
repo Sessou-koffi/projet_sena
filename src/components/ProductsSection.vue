@@ -32,6 +32,18 @@
                 >
                     Imprimantes bureau
                 </button>
+                <button 
+                    :class="['filter-btn', { active: activeFilter === 'couleur' }]"
+                    @click="activeFilter = 'couleur'"
+                >
+                    Couleur
+                </button>
+                <button 
+                    :class="['filter-btn', { active: activeFilter === 'monochrome' }]"
+                    @click="activeFilter = 'monochrome'"
+                >
+                    Noir & Blanc
+                </button>
             </div>
 
             <!-- Grille de produits -->
@@ -129,7 +141,7 @@ const activeFilter = ref('all');
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22997559059';
+const whatsappNumber = '22901918938';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite des informations sur vos produits.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

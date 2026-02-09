@@ -217,7 +217,7 @@ const goBack = () => {
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22901918938';
+const whatsappNumber = '22997559059';
 const whatsappUrl = computed(() => {
     if (!product.value) return '';
     const message = encodeURIComponent(`Bonjour, je suis intéressé par le ${product.value.brand} ${product.value.name} (${formatPrice(product.value.priceTTC)} TTC). Pouvez-vous me donner plus d'informations ?`);

@@ -21,11 +21,10 @@
                 <div class="footer-links">
                     <h4>Liens rapides</h4>
                     <ul>
-                        <li><a href="#solutions">Nos solutions</a></li>
-                        <li><a href="#produits">Nos produits</a></li>
-                        <li><a href="#processus">Comment ça marche</a></li>
-                        <li><a href="#temoignages">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#/" @click="scrollToSection('solutions')">Nos solutions</a></li>
+                        <li><a href="#/" @click="scrollToSection('catalogue')">Catalogue</a></li>
+                        <li><a href="#/" @click="scrollToSection('processus')">Comment ça marche</a></li>
+                        <li><a href="#/" @click="scrollToSection('contact')">Contact</a></li>
                     </ul>
                 </div>
 
@@ -115,9 +114,9 @@ import { analyticsService } from '../services/api';
 const currentYear = new Date().getFullYear();
 
 /**
- * Configuration WhatsApp
+ * Configuration WhatsApp (ancien numéro pour les redirections)
  */
-const whatsappNumber = '22901918938';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, j\'aimerais avoir plus d\'informations sur vos solutions d\'impression.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
@@ -128,6 +127,16 @@ const qrCodeUrl = computed(() => {
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
     return `https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=${encodeURIComponent(whatsappLink)}`;
 });
+
+/**
+ * Scroll vers une section
+ */
+const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+};
 
 /**
  * Tracker le clic WhatsApp

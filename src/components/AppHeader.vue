@@ -18,9 +18,9 @@
                 <!-- Navigation desktop -->
                 <nav class="nav-desktop">
                     <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
-                    <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Offres</router-link>
                     <router-link to="/#catalogue" class="nav-link" @click="scrollToSection('catalogue')">Catalogue</router-link>
                     <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
+                    <router-link to="/#contact" class="nav-link" @click="scrollToSection('contact')">Contact</router-link>
                 </nav>
 
                 <!-- Bouton CTA WhatsApp -->
@@ -45,9 +45,9 @@
         <transition name="slide">
             <nav v-if="isMobileMenuOpen" class="nav-mobile">
                 <router-link to="/#solutions" class="nav-link" @click="scrollToSection('solutions')">Solutions</router-link>
-                <router-link to="/#produits" class="nav-link" @click="scrollToSection('produits')">Nos Offres</router-link>
                 <router-link to="/#catalogue" class="nav-link" @click="scrollToSection('catalogue')">Catalogue</router-link>
                 <router-link to="/#processus" class="nav-link" @click="scrollToSection('processus')">Comment ça marche</router-link>
+                <router-link to="/#contact" class="nav-link" @click="scrollToSection('contact')">Contact</router-link>
                 <a 
                     :href="whatsappUrl" 
                     target="_blank" 

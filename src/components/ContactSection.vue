@@ -196,7 +196,7 @@ const submitSuccess = ref(false);
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22901918938';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

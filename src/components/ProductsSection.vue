@@ -141,7 +141,7 @@ const activeFilter = ref('all');
 /**
  * Configuration WhatsApp
  */
-const whatsappNumber = '22901918938';
+const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite des informations sur vos produits.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

@@ -363,7 +363,18 @@ const trackWhatsAppClick = () => {
     border-left-color: white;
 }
 
-/* Responsive */
+/* Responsive - Breakpoints professionnels */
+@media (max-width: 1024px) {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px 25px;
+    }
+    
+    .footer-brand {
+        grid-column: span 3;
+    }
+}
+
 @media (max-width: 968px) {
     .footer-content {
         grid-template-columns: 1fr 1fr;
@@ -381,6 +392,12 @@ const trackWhatsAppClick = () => {
     }
 }
 
+@media (max-width: 768px) {
+    .footer-content {
+        gap: 30px 20px;
+    }
+}
+
 @media (max-width: 600px) {
     .footer {
         padding-top: 40px;
@@ -389,7 +406,7 @@ const trackWhatsAppClick = () => {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 30px;
+        gap: 28px;
     }
     
     .footer-brand {
@@ -410,7 +427,8 @@ const trackWhatsAppClick = () => {
     
     .footer-links h4,
     .footer-services h4,
-    .footer-contact h4 {
+    .footer-contact h4,
+    .footer-qr h4 {
         font-size: 1rem;
         margin-bottom: 15px;
     }
@@ -449,8 +467,8 @@ const trackWhatsAppClick = () => {
     .whatsapp-float {
         bottom: 15px;
         right: 15px;
-        width: 50px;
-        height: 50px;
+        width: 54px;
+        height: 54px;
     }
     
     .whatsapp-icon {
@@ -465,10 +483,23 @@ const trackWhatsAppClick = () => {
         padding: 12px;
     }
     
-    .qr-code-placeholder {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto;
+    .qr-code-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        padding-top: 35px;
+    }
+    
+    .footer-content {
+        gap: 24px;
+    }
+    
+    .footer-description {
+        font-size: 0.85rem;
     }
 }
 
@@ -478,7 +509,22 @@ const trackWhatsAppClick = () => {
     }
     
     .container {
-        padding: 0 15px;
+        padding: 0 12px;
+    }
+    
+    .logo-img {
+        height: 45px;
+    }
+    
+    .whatsapp-float {
+        bottom: 12px;
+        right: 12px;
+        width: 48px;
+        height: 48px;
+    }
+    
+    .whatsapp-icon {
+        font-size: 1.3rem;
     }
 }
 </style>

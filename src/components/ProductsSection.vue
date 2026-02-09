@@ -791,20 +791,28 @@ const requestDevis = (product) => {
     .filters {
         justify-content: flex-start;
         overflow-x: auto;
-        padding-bottom: 10px;
-        margin-bottom: 30px;
+        padding-bottom: 12px;
+        margin-bottom: 25px;
+        gap: 8px;
         -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .filters::-webkit-scrollbar {
+        display: none;
     }
     
     .filter-btn {
         flex-shrink: 0;
-        padding: 8px 16px;
-        font-size: 0.8rem;
+        padding: 10px 18px;
+        font-size: 0.85rem;
+        white-space: nowrap;
     }
     
     .products-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
     }
     
     .product-card {
@@ -812,8 +820,7 @@ const requestDevis = (product) => {
     }
     
     .product-badges {
-        top: 10px;
-        left: 10px;
+        gap: 6px;
     }
     
     .badge {
@@ -868,21 +875,54 @@ const requestDevis = (product) => {
     
     .section-cta p {
         font-size: 1rem;
+        margin-bottom: 20px;
     }
     
-    .btn-whatsapp {
-        padding: 14px 24px;
-        font-size: 1rem;
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    
+    .btn-whatsapp,
+    .btn-download {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header {
+        margin-bottom: 35px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .filter-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
     }
 }
 
 @media (max-width: 380px) {
+    .products-section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
     .section-title {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
     }
     
     .product-image {
-        height: 180px;
+        height: 170px;
     }
     
     .product-info {
@@ -894,7 +934,12 @@ const requestDevis = (product) => {
     }
     
     .price-ttc {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
+    }
+    
+    .btn-devis {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
 </style>

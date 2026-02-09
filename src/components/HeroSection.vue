@@ -465,7 +465,17 @@ onUnmounted(() => {
     }
 }
 
-/* Responsive */
+/* Responsive - Tablettes et mobiles */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 2.25rem;
+    }
+}
+
 @media (max-width: 968px) {
     .hero-content {
         grid-template-columns: 1fr;
@@ -485,6 +495,13 @@ onUnmounted(() => {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .btn {
+        width: 100%;
     }
     
     .hero-slider {
@@ -506,21 +523,21 @@ onUnmounted(() => {
     .hero {
         padding-top: 70px;
         min-height: auto;
-        padding-bottom: 80px;
+        padding-bottom: 60px;
     }
     
     .hero-content {
-        gap: 30px;
+        gap: 25px;
     }
     
     .hero-title {
         font-size: 1.5rem;
-        line-height: 1.3;
+        line-height: 1.35;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
-        margin-bottom: 20px;
+        font-size: 0.95rem;
+        margin-bottom: 18px;
     }
     
     .btn {
@@ -536,17 +553,19 @@ onUnmounted(() => {
     
     .hero-cta {
         width: 100%;
+        max-width: 100%;
         gap: 12px;
+        padding: 0 5px;
     }
     
     .feature-badge {
         font-size: 0.75rem;
-        padding: 5px 10px;
+        padding: 6px 12px;
     }
     
     .hero-slider {
         max-width: 100%;
-        margin: 0 -10px;
+        margin: 0;
     }
     
     .slider-container {
@@ -554,17 +573,18 @@ onUnmounted(() => {
     }
     
     .slides {
-        min-height: 250px;
+        min-height: 220px;
     }
     
     .slide img {
-        height: 200px;
-        object-fit: cover;
+        height: 180px;
+        object-fit: contain;
+        background: #f8f9fa;
     }
     
     .slide-caption {
         padding: 12px;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .slider-dots {
@@ -586,9 +606,36 @@ onUnmounted(() => {
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 65px;
+    }
+    
     .hero-title {
-        font-size: 1.3rem;
+        font-size: 1.35rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .hero-features {
+        gap: 8px;
+    }
+    
+    .feature-badge {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .hero {
+        padding-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: 1.2rem;
     }
     
     .hero-features {
@@ -596,16 +643,20 @@ onUnmounted(() => {
     }
     
     .feature-badge {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
         padding: 4px 8px;
     }
     
     .slides {
-        min-height: 200px;
+        min-height: 180px;
     }
     
     .slide img {
-        height: 160px;
+        height: 150px;
+    }
+    
+    .container {
+        padding: 0 12px;
     }
 }
 </style>

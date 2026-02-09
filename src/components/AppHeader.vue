@@ -273,41 +273,58 @@ onUnmounted(() => {
     font-size: 1.2rem;
 }
 
-/* Menu hamburger */
+/* Menu hamburger - Style professionnel et bien aligné */
 .menu-toggle {
     display: none;
+    align-items: center;
+    justify-content: center;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 12px;
     z-index: 1001;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.menu-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.menu-toggle:active {
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .hamburger {
     display: block;
-    width: 25px;
-    height: 3px;
+    width: 24px;
+    height: 2px;
     background: #1a1a1a;
     position: relative;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
+    border-radius: 2px;
 }
 
 .hamburger::before,
 .hamburger::after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 3px;
+    left: 0;
+    width: 24px;
+    height: 2px;
     background: #1a1a1a;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+    border-radius: 2px;
 }
 
 .hamburger::before {
-    top: -8px;
+    top: -7px;
 }
 
 .hamburger::after {
-    bottom: -8px;
+    bottom: -7px;
 }
 
 .hamburger.active {
@@ -373,7 +390,17 @@ onUnmounted(() => {
     opacity: 0;
 }
 
-/* Responsive */
+/* Responsive - Breakpoints professionnels */
+@media (max-width: 1024px) {
+    .nav-desktop {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
 @media (max-width: 968px) {
     .nav-desktop {
         display: none;
@@ -384,22 +411,26 @@ onUnmounted(() => {
     }
     
     .menu-toggle {
-        display: block;
+        display: flex;
     }
     
     .logo-img {
         height: 55px;
+    }
+    
+    .header-content {
+        gap: 10px;
     }
 }
 
 @media (max-width: 600px) {
     .header-content {
         height: 60px;
-        padding: 0 5px;
+        padding: 0;
     }
     
     .logo-img {
-        height: 45px;
+        height: 48px;
     }
     
     .logo-text {
@@ -408,35 +439,70 @@ onUnmounted(() => {
     
     .nav-mobile {
         top: 60px;
-        padding: 15px;
+        padding: 20px 15px;
     }
     
     .nav-mobile .nav-link {
-        padding: 12px;
+        padding: 14px 16px;
         font-size: 1rem;
+        border-radius: 10px;
+        background: #f8fafc;
+        margin-bottom: 8px;
+    }
+    
+    .nav-mobile .nav-link:hover,
+    .nav-mobile .nav-link:active {
+        background: #e2e8f0;
+    }
+    
+    .btn-whatsapp-mobile {
+        margin-top: 15px;
+        padding: 16px;
+        font-size: 1rem;
+        border-radius: 10px;
     }
     
     .container {
-        padding: 0 10px;
+        padding: 0 12px;
+    }
+    
+    .menu-toggle {
+        width: 44px;
+        height: 44px;
+        padding: 10px;
     }
 }
 
 @media (max-width: 380px) {
+    .header-content {
+        height: 56px;
+    }
+    
     .logo-img {
-        height: 40px;
+        height: 42px;
+    }
+    
+    .nav-mobile {
+        top: 56px;
     }
     
     .menu-toggle {
+        width: 40px;
+        height: 40px;
         padding: 8px;
     }
     
     .hamburger {
-        width: 22px;
+        width: 20px;
     }
     
     .hamburger::before,
     .hamburger::after {
-        width: 22px;
+        width: 20px;
+    }
+    
+    .container {
+        padding: 0 10px;
     }
 }
 </style>

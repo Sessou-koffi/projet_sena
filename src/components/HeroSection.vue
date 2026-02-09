@@ -79,11 +79,11 @@
             </div>
         </div>
 
-        <!-- Scroll indicator -->
-        <div class="scroll-indicator">
+        <!-- Scroll indicator - Cliquable -->
+        <a href="#solutions" class="scroll-indicator" @click.prevent="scrollToSolutions">
             <span>Découvrir nos solutions</span>
             <div class="scroll-arrow">↓</div>
-        </div>
+        </a>
     </section>
 </template>
 
@@ -108,6 +108,23 @@ import img339CS from '../assets/Toshiba_E_STUDIO_339CS.png';
 const whatsappNumber = '22997559059';
 const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devis pour des solutions d\'impression professionnelles.');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
+
+/**
+ * Scroll vers la section Solutions
+ */
+const scrollToSolutions = () => {
+    const section = document.getElementById('solutions');
+    if (section) {
+        const headerOffset = 80;
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    }
+};
 
 /**
  * Images du slider - Produits réels
@@ -433,7 +450,7 @@ onUnmounted(() => {
     transform: translateX(-30px);
 }
 
-/* Scroll indicator */
+/* Scroll indicator - Cliquable */
 .scroll-indicator {
     position: absolute;
     bottom: 30px;
@@ -443,6 +460,13 @@ onUnmounted(() => {
     color: white;
     opacity: 0.7;
     animation: bounce 2s infinite;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
 }
 
 .scroll-indicator span {

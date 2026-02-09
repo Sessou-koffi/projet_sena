@@ -91,16 +91,16 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue';
 import { analyticsService } from '../services/api';
 
-// Import des images produits
+// Import des images produits (format carré)
 import img2525AC from '../assets/TOSHIBA_STUDIO_2525_couleur.png';
 import img2528A from '../assets/TOSHIBA_STUDIO_2528_A.png';
 import img2508A from '../assets/TOSHIBA_STUDIO_2508_A.png';
-import img2518A from '../assets/TOSHIBA_STUDIO_18_A.png';
+import img2518A from '../assets/TOSHIBA_STUDIO_2518_A.png';
 import imgB235 from '../assets/XEROW_B_235.png';
 import imgB400 from '../assets/XEROX_B400.png';
 import img409AS from '../assets/Toshiba_E_STUDIO_409AS.png';
 import img409CS from '../assets/Toshiba_E_STUDIO_409CS.png';
-import img339CS from '../assets/Toshiba_E-STUDIO.png';
+import img339CS from '../assets/Toshiba_E_STUDIO_339CS.png';
 
 /**
  * Configuration WhatsApp
@@ -366,7 +366,8 @@ onUnmounted(() => {
 
 .slides {
     position: relative;
-    min-height: 400px;
+    aspect-ratio: 1 / 1;
+    max-height: 400px;
 }
 
 .slide {
@@ -379,9 +380,10 @@ onUnmounted(() => {
 
 .slide img {
     width: 100%;
-    height: 350px;
+    height: 100%;
     object-fit: contain;
-    background: #f8f9fa;
+    background: #ffffff;
+    padding: 15px;
 }
 
 .slide-caption {
@@ -511,11 +513,12 @@ onUnmounted(() => {
     }
     
     .slides {
-        min-height: 350px;
+        aspect-ratio: 1 / 1;
+        max-height: 350px;
     }
     
     .slide img {
-        height: 300px;
+        padding: 15px;
     }
 }
 
@@ -573,13 +576,14 @@ onUnmounted(() => {
     }
     
     .slides {
-        min-height: 220px;
+        aspect-ratio: 1 / 1;
+        max-height: 280px;
     }
     
     .slide img {
-        height: 180px;
         object-fit: contain;
-        background: #f8f9fa;
+        background: #ffffff;
+        padding: 12px;
     }
     
     .slide-caption {
@@ -648,11 +652,12 @@ onUnmounted(() => {
     }
     
     .slides {
-        min-height: 180px;
+        aspect-ratio: 1 / 1;
+        max-height: 220px;
     }
     
     .slide img {
-        height: 150px;
+        padding: 10px;
     }
     
     .container {

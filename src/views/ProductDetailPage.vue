@@ -182,16 +182,16 @@
 import { ref, computed, onMounted, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 
-// Import des images locales
+// Import des images locales (format carré)
 import img2525AC from '../assets/TOSHIBA_STUDIO_2525_couleur.png';
 import img2528A from '../assets/TOSHIBA_STUDIO_2528_A.png';
 import img2508A from '../assets/TOSHIBA_STUDIO_2508_A.png';
-import img2518A from '../assets/TOSHIBA_STUDIO_18_A.png';
+import img2518A from '../assets/TOSHIBA_STUDIO_2518_A.png';
 import imgB235 from '../assets/XEROW_B_235.png';
 import imgB400 from '../assets/XEROX_B400.png';
 import img409AS from '../assets/Toshiba_E_STUDIO_409AS.png';
 import img409CS from '../assets/Toshiba_E_STUDIO_409CS.png';
-import img339CS from '../assets/Toshiba_E-STUDIO.png';
+import img339CS from '../assets/Toshiba_E_STUDIO_339CS.png';
 
 const route = useRoute();
 const router = useRouter();
@@ -596,7 +596,7 @@ watch(() => route.params.slug, (newSlug) => {
     align-items: start;
 }
 
-/* Galerie */
+/* Galerie - Optimisé pour images carrées */
 .product-gallery {
     position: sticky;
     top: 100px;
@@ -607,14 +607,16 @@ watch(() => route.params.slug, (newSlug) => {
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    background: #f8f9fa;
+    background: #ffffff;
+    aspect-ratio: 1 / 1;
 }
 
 .main-image img {
     width: 100%;
-    height: 400px;
+    height: 100%;
     object-fit: contain;
-    padding: 20px;
+    padding: 25px;
+    background: #ffffff;
 }
 
 /* Badges dans product-info */

@@ -6,7 +6,7 @@
     <section id="solutions" class="solution-section">
         <div class="container">
             <div class="solution-content">
-                <!-- Texte de la solution -->
+                <!-- Texte de la solution - Centré -->
                 <div class="solution-text">
                     <h2 class="section-title">
                         Nous accompagnons les entreprises et institutions avec :
@@ -33,33 +33,6 @@
                         <span class="btn-icon"></span>
                         Demander un devis
                     </a>
-                </div>
-
-                <!-- Images des produits -->
-                <div class="solution-images">
-                    <div class="image-grid">
-                        <div class="image-card">
-                            <img 
-                                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400" 
-                                alt="Copieur professionnel"
-                            />
-                            <span class="image-label">Copieurs robustes</span>
-                        </div>
-                        <!-- <div class="image-card">
-                            <img 
-                                src="https://images.unsplash.com/photo-1606567595334-d39972c85dfd?w=400" 
-                                alt="Imprimante professionnelle"
-                            />
-                            <span class="image-label">Imprimantes performantes</span>
-                        </div> -->
-                        <div class="image-card large">
-                            <img 
-                                src="https://images.unsplash.com/photo-1562408590-e32931084e23?w=400" 
-                                alt="Service maintenance"
-                            />
-                            <span class="image-label">Maintenance suivie</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -103,45 +76,57 @@ const trackCtaClick = () => {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .solution-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    text-align: center;
 }
 
 .section-title {
     font-size: 2rem;
     color: #1a1a1a;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     line-height: 1.3;
 }
 
 .solution-list {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 25px;
+    gap: 18px;
+    margin-bottom: 30px;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .solution-item {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    font-size: 1.1rem;
+    gap: 14px;
+    font-size: 1.15rem;
     color: #374151;
+    text-align: left;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.solution-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .solution-check {
     color: #DC2626;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     flex-shrink: 0;
+    font-weight: bold;
 }
 
 .solution-label {
@@ -149,14 +134,18 @@ const trackCtaClick = () => {
 }
 
 .solution-tagline {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #1a1a1a;
     font-weight: 600;
-    margin-bottom: 30px;
-    padding: 15px 20px;
+    margin-bottom: 35px;
+    padding: 18px 25px;
     background: rgba(220, 38, 38, 0.08);
-    border-radius: 10px;
+    border-radius: 12px;
     border-left: 4px solid #DC2626;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
 }
 
 .btn {
@@ -164,7 +153,7 @@ const trackCtaClick = () => {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 16px 32px;
+    padding: 18px 40px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1.1rem;
@@ -190,71 +179,19 @@ const trackCtaClick = () => {
     font-size: 1.3rem;
 }
 
-/* Grille d'images */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-}
-
-.image-card {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.image-card:hover {
-    transform: translateY(-5px);
-}
-
-.image-card.large {
-    grid-column: span 2;
-}
-
-.image-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    display: block;
-}
-
-.image-card.large img {
-    height: 200px;
-}
-
-.image-label {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 12px 15px;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-    color: white;
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
 /* Responsive */
-@media (max-width: 968px) {
-    .solution-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
+@media (max-width: 768px) {
+    .solution-section {
+        padding: 70px 0;
     }
     
-    .solution-text {
-        text-align: center;
+    .section-title {
+        font-size: 1.7rem;
     }
     
     .solution-item {
-        justify-content: center;
-        text-align: left;
-    }
-    
-    .solution-images {
-        max-width: 500px;
-        margin: 0 auto;
+        font-size: 1.05rem;
+        padding: 14px 18px;
     }
 }
 
@@ -269,7 +206,8 @@ const trackCtaClick = () => {
     
     .section-title {
         font-size: 1.4rem;
-        line-height: 1.3;
+        line-height: 1.35;
+        margin-bottom: 28px;
     }
     
     .solution-list {
@@ -278,54 +216,48 @@ const trackCtaClick = () => {
     
     .solution-item {
         font-size: 0.95rem;
-        gap: 10px;
+        gap: 12px;
+        padding: 14px 16px;
     }
     
     .solution-check {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
     
     .solution-tagline {
         font-size: 1rem;
-        padding: 12px 15px;
-    }
-    
-    .image-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-    
-    .image-card.large {
-        grid-column: span 1;
-    }
-    
-    .image-card img {
-        height: 150px;
-    }
-    
-    .image-card.large img {
-        height: 160px;
-    }
-    
-    .image-label {
-        font-size: 0.85rem;
-        padding: 10px 12px;
+        padding: 14px 18px;
+        margin-bottom: 28px;
     }
     
     .btn {
         width: 100%;
-        padding: 14px 24px;
+        padding: 16px 24px;
         font-size: 1rem;
     }
 }
 
 @media (max-width: 380px) {
+    .solution-section {
+        padding: 40px 0;
+    }
+    
+    .container {
+        padding: 0 12px;
+    }
+    
     .section-title {
         font-size: 1.25rem;
     }
     
     .solution-item {
         font-size: 0.9rem;
+        padding: 12px 14px;
+    }
+    
+    .solution-tagline {
+        font-size: 0.95rem;
+        padding: 12px 15px;
     }
 }
 </style>

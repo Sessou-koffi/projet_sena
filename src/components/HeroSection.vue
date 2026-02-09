@@ -80,8 +80,8 @@
         </div>
 
         <!-- Scroll indicator - Cliquable -->
-        <a href="#solutions" class="scroll-indicator" @click.prevent="scrollToSolutions">
-            <span>Découvrir nos solutions</span>
+        <a href="#catalogue" class="scroll-indicator" @click.prevent="scrollToCatalogue">
+            <span>Découvrir notre catalogue</span>
             <div class="scroll-arrow">↓</div>
         </a>
     </section>
@@ -110,10 +110,10 @@ const whatsappMessage = encodeURIComponent('Bonjour, je souhaite obtenir un devi
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 
 /**
- * Scroll vers la section Solutions
+ * Scroll vers la section Catalogue
  */
-const scrollToSolutions = () => {
-    const section = document.getElementById('solutions');
+const scrollToCatalogue = () => {
+    const section = document.getElementById('catalogue');
     if (section) {
         const headerOffset = 80;
         const elementPosition = section.getBoundingClientRect().top;

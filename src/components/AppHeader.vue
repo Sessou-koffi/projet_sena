@@ -71,9 +71,9 @@ const route = useRoute();
 
 /**
  * Configuration WhatsApp
- * Remplacer par le vrai numéro de l'entreprise
+ * Numéro pour les redirections WhatsApp
  */
-const whatsappNumber = '2290197559059'; // Numéro au format international sans +
+const whatsappNumber = '22997559059'; // Numéro au format international sans +
 const whatsappMessage = encodeURIComponent('Bonjour, je suis intéressé par vos solutions d\'impression professionnelles. Pouvez-vous me rappeler ?');
 const whatsappUrl = computed(() => `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`);
 

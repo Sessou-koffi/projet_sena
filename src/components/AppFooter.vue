@@ -82,7 +82,7 @@
 
             <!-- Barre de copyright -->
             <div class="footer-bottom">
-                <p>&copy; {{ currentYear }} SENA Copieurs & Imprimantes. Tous droits réservés.</p>
+                <p>&copy; {{ currentYear }} SENA & FILS. Tous droits réservés.</p>
                 <div class="footer-legal">
                     <a href="#">Mentions légales</a>
                     <a href="#">Politique de confidentialité</a>

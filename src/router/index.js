@@ -14,7 +14,7 @@ const routes = [
         name: 'Home',
         component: () => import('../views/HomePage.vue'),
         meta: {
-            title: 'Copieurs & Imprimantes Professionnels - Bénin',
+            title: 'SENA & FILS - Solutions d\'Impression Professionnelles',
             description: 'Solutions d\'impression professionnelles pour entreprises et institutions au Bénin'
         }
     },

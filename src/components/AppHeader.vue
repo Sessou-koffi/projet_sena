@@ -11,7 +11,7 @@
                     <img src="../assets/logo.png" alt="SENA & FILS" class="logo-img" />
                      <span class="logo-text">
                         <strong>SENA & FILS</strong> <br/>
-                        <small>Copieurs & Imprimantes</small>
+                        <small>Solutions d'Impression</small>
                     </span> 
                 </router-link>
 
